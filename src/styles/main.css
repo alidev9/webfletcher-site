@@ -1,0 +1,10 @@
+:root{
+    /*Colors*/
+    --background-color: rgba(242, 248, 255, 1);
+    --header-main-color: rgba(16, 46, 70, 1);
+    /*Applying linear-gradients as colors sometimes requires workarounds,
+    because the linear-gradient CSS function returns an image.*/
+    --header-secondary-color: linear-gradient(90deg, #3FB3FF 0%, #599EFF 100%);
+    --buttons-color: linear-gradient(90deg, #3FB3FF 0%, #599EFF 100%);
+    --paragrah-color: rgba(16, 46, 70, 0.8);    
+}

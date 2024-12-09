@@ -1,10 +1,8 @@
-
+import Homepage from "./Homepage";
 
 function App() {
   return (
-    <div className="App">
-      hello world
-    </div>
+    <Homepage></Homepage>
   );
 }
 
