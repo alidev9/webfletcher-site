@@ -4,7 +4,7 @@ function Homepage(){
         <>
             <div className="hero-section-container">
                 <div className="hero-section-cta">
-                    <h1>Your Vision, Perfectly Tailored</h1>
+                    <h1>Your Vision, <span>Perfectly</span> Tailored</h1>
                     <p>From custom designs to seamless functionality, we bring your vision to life. Let's build something extraordinary together.</p>
                     <button className="cta-button">Explore Services</button>
                 </div>

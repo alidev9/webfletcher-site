@@ -1,3 +1,26 @@
+/*CSS resets*/
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+p,h1,h2,h3{
+    margin: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+}
+
 :root{
     /*Colors*/
     --background-color: rgba(242, 248, 255, 1);
@@ -8,3 +31,37 @@
     --buttons-color: linear-gradient(90deg, #3FB3FF 0%, #599EFF 100%);
     --paragrah-color: rgba(16, 46, 70, 0.8);    
 }
+/*The minimum screen width being targeted is 320px,
+which decides the minimum value for all clamped sizes*/
+.hero-section-cta h1,
+.hero-section-cta h1 span{
+    font-size: clamp(36px, calc(100vw*45/399), 49.6px);
+    line-height: clamp(49.6px, calc(100vw * 61.92/399), 68.28px);
+}
+
+.hero-section-cta h1{
+    font-family: Inter;
+    font-weight: 800;
+    color: var(--header-main-color);
+    width: clamp(296.74px, calc(100vw * 370/399), 408px);
+    margin: 0 auto;
+}
+
+.hero-section-cta h1 span{
+    font-family: Lily Script One;
+    font-weight: 400;
+    color: rgba(0,0,0,0);
+    background-image: var(--header-secondary-color);
+    background-clip: text;
+}
+
+.hero-section-cta p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 18px auto;
+    width: clamp(289.5px, calc(100vw * 361/399), 398.1px);
+}
+/*Elements from the hero banner are sized and positioned
+proportionately to the viewport as they are simply visual elements.*/
