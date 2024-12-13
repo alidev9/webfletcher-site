@@ -9,12 +9,42 @@ function Homepage(){
                     <button className="cta-button">Explore Services</button>
                 </div>
                 <div className="hero-section-info">
-                    <div>Where design meets functionality</div>
-                    <div>Host with ease!</div>
-                    <img src="/images/hero-image-1.png" alt="" />
-                    <img src="/images/hero-image-2.png" alt="" />
-                    <div>Be seen with SEO</div>
-                    <img src="/images/target-graphic.png" alt="" />
+                    <div className="hero-text-container">
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        Where design meets functionality
+                    </div>
+                    <div className="hero-text-container">
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        Host with ease!
+                    </div>
+                    <div className="hero-image-container">
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <img src="/images/hero-image-1.png" alt="" />
+                    </div>
+                    <div className="hero-image-container">
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <img src="/images/hero-image-2.png" alt="" />
+                        </div>
+                    <div className="hero-text-container">
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        <div className="border-corner"></div>
+                        Be seen with SEO
+                    </div>
+                    <img className="target-graphic" src="/images/target-graphic.png" alt="" />
                 </div>
             </div>
         </>
