@@ -3,6 +3,10 @@ ul{
     padding: 0;
     margin: 0;
 }
+ol{
+    margin: 0;
+    padding: 0;
+}
 li{
     list-style: none;
 }
@@ -19,6 +23,7 @@ html{
 }
 body{
     margin: 0;
+    height: 100%;
 }
 
 :root{
@@ -26,171 +31,200 @@ body{
     /*Used as background and color for some text*/
     --white: rgba(242, 248, 255, 1);
     --main-color: rgba(16, 46, 70, 1);
+    --main-color-deemphasize: rgba(16, 46, 70, 0.8);
     /*Applying linear-gradients as colors sometimes requires workarounds,
     because the linear-gradient CSS function returns an image.*/
     --secondary-color: linear-gradient(90deg, #3FB3FF 0%, #599EFF 100%);
 }
-.hero-section-cta{
-    width: fit-content;
-    margin: 0 auto;
-}
-/*The minimum mobile screen width being targeted is 320px,
-which decides the minimum value for all clamped sizes*/
-/*The maximum mobile screen width is 440px*/
-.hero-section-cta h1,
-.hero-section-cta h1 span{
-    /*Elements from the hero banner are sized and positioned
-    proportionately to the viewport as they are simply visual elements.*/
-    font-size: clamp(36px, calc(100vw*45/399), 49.6px);
-    line-height: clamp(49.6px, calc(100vw * 61.92/399), 68.28px);
-}
+/*Media Queries can be used instead of repeating clamp functions*/
+@media (320px <= width){
+    #root{
+        background-color: var(--white);
+        width: 100%;
+        height: 100%;
+    }
+    nav{
+        height: 153px;
+        background-image: url('../assets/images/nav-cloud.svg');
+        background-size: 302px 204px;
+        background-repeat: no-repeat;
+        background-position: -51px -59px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 51px 18px 71px 18px;
+    }
+    .homepage-link a{
+        display: flex;
+        align-items: center;
+        gap: 21.96px;
+    }
+    .homepage-link span{
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 19.36px;
+        letter-spacing: 0.1em;
+        color: var(--main-color);
+    }
+    .hero-section-cta{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    /*The minimum mobile screen width being targeted is 320px,
+    which decides the minimum value for all clamped sizes*/
+    /*The maximum mobile screen width is 440px*/
+    .hero-section-cta h1,
+    .hero-section-cta h1 span{
+        /*Elements from the hero banner are sized and positioned
+        proportionately to the viewport as they are simply visual elements.*/
+        font-size: calc(100vw*45/399);
+        line-height: calc(100vw * 61.92/399);
+    }
 
-.hero-section-cta h1{
-    font-family: Inter;
-    font-weight: 800;
-    color: var(--main-color);
-    width: clamp(296.74px, calc(100vw * 370/399), 408px);
-}
+    .hero-section-cta h1{
+        font-family: Inter;
+        font-weight: 800;
+        color: var(--main-color);
+        width: calc(100vw * 370/399);
+    }
 
-.hero-section-cta h1 span{
-    font-family: Lily Script One;
-    font-weight: 400;
-    color: rgba(0,0,0,0);
-    background-image: var(--secondary-color);
-    background-clip: text;
-}
+    .hero-section-cta h1 span{
+        font-family: Lily Script One;
+        font-weight: 400;
+        color: rgba(0,0,0,0);
+        background-image: var(--secondary-color);
+        background-clip: text;
+    }
 
-.hero-section-cta p{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    width: clamp(289.5px, calc(100vw * 361/399), 398.1px);
-    margin: 18px 0;
-}
+    .hero-section-cta p{
+        font-family: Inter;
+        color: var(--main-color-deemphasize);
+        font-weight: 500;
+        line-height: 24px;
+        width: calc(100vw * 361/399);
+        margin: 18px 0;
+    }
 
-.hero-section-cta button{
-    width: clamp(218.34px, calc(100vw*242/399), 266.87px);
-    height: 51px;
-    border-radius: 30px;
-    border-color: rgba(0,0,0,0);
-    background-image: var(--secondary-color);
+    .hero-section-cta button{
+        width: calc(100vw*242/399);
+        height: calc(100vw*51/399);
+        border-radius: 30px;
+        border-color: rgba(0,0,0,0);
+        background-image: var(--secondary-color);
 
-    font-family: "Inter";
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--white);
-}
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: calc(100vw*18/399);
+        color: var(--white);
+    }
 
-.hero-section-info{
-    margin: 12px auto;
-    position: relative;
-    height: clamp(337.56px, calc(100vw*420.9/399), 506.35px);
-}
+    .hero-section-info{
+        margin: 12px auto;
+        position: relative;
+        height: calc(100vw*420.9/399);
+    }
 
-.hero-section-info *{
-    position: absolute;
-}
-/*text in hero-section-info will be sized responsively,
-as the text serves more of a decorative role.*/
-.hero-section-info > div:not(.hero-image-container){
-    font-family: Inter;
-    color: var(--main-color);
-    border: 1.1px solid rgba(73, 149, 255, 1);
-    /* padding: 5.52px; */
-    padding: clamp(4.43px, calc(100vw*5.52/399),6.64px);
-}
-.hero-section-info :nth-child(1 of .hero-text-container){
-    top: clamp(39px, calc(100vw*49/399), 59px);
-    right: clamp(13px, calc(100vw*16/399), 19px);
-    font-size: clamp(14px, calc(100vw*17.67/399), 21px);
-    font-weight: 600;
-    line-height: clamp(17px, calc(100vw*21.39/399), 26px);
-}
-.hero-section-info :nth-child(2 of .hero-text-container){
-    top: clamp(107px, calc(100vw*133/399), 160px);
-    left: clamp(13px, calc(100vw*16/399), 19px);
-    font-size: clamp(17px, calc(100vw*21.4/399), 26px);
-    font-weight: 600;
-    line-height: clamp(21px, calc(100vw*25.9/399), 31px);
-}
-.hero-section-info :nth-child(3 of .hero-text-container){
-    /*needs to be defined due to nested span element*/
-    width: clamp(110px, calc(100vw*137.3/399), 165px);
-    height: clamp(15px, calc(100vw*19.3/399), 23px);
-    top: clamp(229px, calc(100vw*285/399), 343px);
-    right: clamp(13px, calc(100vw*16/399), 19px);
-    font-size: clamp(13px, calc(100vw*16.53/399), 20px);
-    font-weight: 600;
-    line-height: clamp(16px, calc(100vw*20/399), 24px);
-}
-.hero-section-info :nth-child(3 of .hero-text-container) span{
-    margin-left: clamp(3px, calc(100vw*4/399), 5px);
-    font-size: clamp(13px, calc(100vw*16.53/399), 20px);
-    font-weight: 800;
-    line-height: clamp(16px, calc(100vw*20/399), 24px);
-    background-image: var(--secondary-color);
-    color: rgba(0,0,0,0);
-    background-clip: text;
-}
-.hero-section-info .border-corner{
-    width: 8.84px;
-    width: clamp(7px, calc(100vw*8.84/399), 11px);
-    height: 8.84px;
-    height: clamp(7px, calc(100vw*8.84/399), 11px);
-    background-color: rgba(142, 206, 245, 1);
-    border: 0.55px solid rgba(73, 149, 255, 1);
-    position: absolute;
-}
-/*positioning the .border-corner elements*/
-/*The .broder-corner sides are 8.84px.
- 8.84px/2 = 4.42px*/
-.hero-section-info .border-corner:nth-child(1){
-    top: clamp(-4px, calc(100vw*-4.42/399), -5px);
-    left: clamp(-4px, calc(100vw*-4.42/399), -5px);
-}
-.hero-section-info .border-corner:nth-child(2){
-    top: clamp(-4px, calc(100vw*-4.42/399), -5px);
-    right: clamp(-4px, calc(100vw*-4.42/399), -5px);
-}
-.hero-section-info .border-corner:nth-child(3){
-    bottom: clamp(-4px, calc(100vw*-4.42/399), -5px);
-    left: clamp(-4px, calc(100vw*-4.42/399), -5px);
-}
-.hero-section-info .border-corner:nth-child(4){
-    bottom: clamp(-4px, calc(100vw*-4.42/399), -5px);
-    right: clamp(-4px, calc(100vw*-4.42/399), -5px);
-}
-.hero-image-container{
-    width: fit-content;
-    border: 1.1px solid rgba(73, 149, 255, 1);
-}
-.hero-section-info :nth-child(1 of .hero-image-container){
-    width: clamp(129px, calc(100vw*160.63/399), 193px);
-    height: clamp(67px, calc(100vw*83.67/399), 101px);
-    top: clamp(99px, calc(100vw*124/399), 149px);
-    right: clamp(13px, calc(100vw*16/399), 19px);
-}
-.hero-section-info :nth-child(1 of .hero-image-container) img{
-    width: clamp(129px, calc(100vw*160.63/399), 193px);
-    height: clamp(67px, calc(100vw*83.67/399), 101px);
-    z-index: -1;
-}
-.hero-section-info :nth-child(2 of .hero-image-container){
-    width: clamp(152px, calc(100vw*189.44/399), 228px);
-    height: clamp(89px, calc(100vw*111.15/399), 134px);
-    top: clamp(184px, calc(100vw*229/399), 275px);
-    left: clamp(13px, calc(100vw*16/399), 19px);
-}
-.hero-section-info :nth-child(2 of .hero-image-container) img{
-    width: clamp(152px, calc(100vw*189.44/399), 228px);
-    height: clamp(89px, calc(100vw*111.15/399), 134px);
-    z-index: -1;
-}
-.hero-section-info .target-graphic{
-    top: 340px;
-    top: clamp(273px, calc(100vw*340/399), 409px);
-    right: clamp(13px, calc(100vw*16/399), 19px);
-    width: clamp(65px, calc(100vw*80.94/399), 97px);
-    height: clamp(65px, calc(100vw*80.94/399), 97px);
+    .hero-section-info *{
+        position: absolute;
+    }
+    /*text in hero-section-info will be sized responsively,
+    as the text serves more of a decorative role.*/
+    .hero-section-info > div:not(.hero-image-container){
+        font-family: Inter;
+        color: var(--main-color);
+        border: 1.1px solid rgba(73, 149, 255, 1);
+        /* padding: 5.52px; */
+        padding: calc(100vw*5.52/399);
+    }
+    .hero-section-info :nth-child(1 of .hero-text-container){
+        top: calc(100vw*49/399);
+        right: calc(100vw*16/399);
+        font-size: calc(100vw*17.67/399);
+        font-weight: 600;
+        line-height: calc(100vw*21.39/399);
+    }
+    .hero-section-info :nth-child(2 of .hero-text-container){
+        top: calc(100vw*133/399);
+        left: calc(100vw*16/399);
+        font-size: calc(100vw*21.4/399);
+        font-weight: 600;
+        line-height: calc(100vw*25.9/399);
+    }
+    .hero-section-info :nth-child(3 of .hero-text-container){
+        /*needs to be defined due to nested span element*/
+        width: calc(100vw*137.3/399);
+        height: calc(100vw*19.3/399);
+        top: calc(100vw*285/399);
+        right: calc(100vw*16/399);
+        font-size: calc(100vw*16.53/399);
+        font-weight: 600;
+        line-height: calc(100vw*20/399);
+    }
+    .hero-section-info :nth-child(3 of .hero-text-container) span{
+        margin-left: calc(100vw*4/399);
+        font-size: calc(100vw*16.53/399);
+        font-weight: 800;
+        line-height: calc(100vw*20/399);
+        background-image: var(--secondary-color);
+        color: rgba(0,0,0,0);
+        background-clip: text;
+    }
+    .hero-section-info .border-corner{
+        width: calc(100vw*8.84/399);
+        height: calc(100vw*8.84/399);
+        background-color: rgba(142, 206, 245, 1);
+        border: 0.55px solid rgba(73, 149, 255, 1);
+        position: absolute;
+        z-index: 2;
+    }
+    /*positioning the .border-corner elements*/
+    /*The .broder-corner sides are 8.84px.
+    8.84px/2 = 4.42px*/
+    .hero-section-info .border-corner:nth-child(1){
+        top: calc(100vw*-4.42/399);
+        left: calc(100vw*-4.42/399);
+    }
+    .hero-section-info .border-corner:nth-child(2){
+        top: calc(100vw*-4.42/399);
+        right: calc(100vw*-4.42/399);
+    }
+    .hero-section-info .border-corner:nth-child(3){
+        bottom: calc(100vw*-4.42/399);
+        left: calc(100vw*-4.42/399);
+    }
+    .hero-section-info .border-corner:nth-child(4){
+        bottom: calc(100vw*-4.42/399);
+        right: calc(100vw*-4.42/399);
+    }
+    .hero-image-container{
+        border: 1.1px solid rgba(73, 149, 255, 1);
+    }
+    .hero-section-info :nth-child(1 of .hero-image-container){
+        width: calc(100vw*160.63/399);
+        height: calc(100vw*83.67/399);
+        top: calc(100vw*124/399);
+        right: calc(100vw*16/399);
+    }
+    .hero-section-info :nth-child(1 of .hero-image-container) img{
+        width: calc(100vw*160.63/399);
+        height: calc(100vw*83.67/399);
+    }
+    .hero-section-info :nth-child(2 of .hero-image-container){
+        width: calc(100vw*189.44/399);
+        height: calc(100vw*111.15/399);
+        top: calc(100vw*229/399);
+        left: calc(100vw*16/399);
+    }
+    .hero-section-info :nth-child(2 of .hero-image-container) img{
+        width: calc(100vw*189.44/399);
+        height: calc(100vw*111.15/399);
+    }
+    .hero-section-info .target-graphic{
+        top: 340px;
+        top: calc(100vw*340/399);
+        right: calc(100vw*16/399);
+        width: calc(100vw*80.94/399);
+        height: calc(100vw*80.94/399);
+    }
 }
