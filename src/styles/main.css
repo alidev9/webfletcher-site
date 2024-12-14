@@ -85,7 +85,8 @@ which decides the minimum value for all clamped sizes*/
 .hero-section-info{
     margin: 12px auto;
     position: relative;
-    height: 420.9px;
+    /* height: 420.9px; */
+    height: clamp(337.56px, calc(100vw*420.9/399), 506.35px);
 }
 
 .hero-section-info *{
@@ -97,18 +98,64 @@ as the text serves more of a decorative role.*/
     font-family: Inter;
     color: var(--main-color);
     border: 1.1px solid rgba(73, 149, 255, 1);
-    padding: 5.52px;
+    /* padding: 5.52px; */
+    padding: clamp(4.43px, calc(100vw*5.52/399),6.64px);
 }
 .hero-section-info :nth-child(1 of .hero-text-container){
     top: 49px;
-    left: 69px;
+    top: clamp(39px, calc(100vw*49/399), 59px);
+    right: 16px;
+    right: clamp(13px, calc(100vw*16/399), 19px);
     font-size: 17.67px;
+    font-size: clamp(14px, calc(100vw*17.67/399), 21px);
     font-weight: 600;
     line-height: 21.39px;
+    line-height: clamp(17px, calc(100vw*21.39/399), 26px);
+}
+.hero-section-info :nth-child(2 of .hero-text-container){
+    top: 133px;
+    top: clamp(107px, calc(100vw*133/399), 160px);
+    left: 16px;
+    left: clamp(13px, calc(100vw*16/399), 19px);
+    font-size: 21.4px;
+    font-size: clamp(17px, calc(100vw*21.4/399), 26px);
+    font-weight: 600;
+    line-height: 25.9px;
+    line-height: clamp(21px, calc(100vw*25.9/399), 31px);
+}
+.hero-section-info :nth-child(3 of .hero-text-container){
+    /*needs to be defined due to nested span element*/
+    width: 137.3px;
+    width: clamp(110px, calc(100vw*137.3/399), 165px);
+    height: 19.3px;
+    height: clamp(15px, calc(100vw*19.3/399), 23px);
+    top: 285px;
+    top: clamp(229px, calc(100vw*285/399), 343px);
+    right: 16px;
+    right: clamp(13px, calc(100vw*16/399), 19px);
+    font-size: 16.53px;
+    font-size: clamp(13px, calc(100vw*16.53/399), 20px);
+    font-weight: 600;
+    line-height: 20px;
+    line-height: clamp(16px, calc(100vw*20/399), 24px);
+}
+.hero-section-info :nth-child(3 of .hero-text-container) span{
+    margin-left: 4px;
+    margin-left: clamp(3px, calc(100vw*4/399), 5px);
+    font-size: 16.53px;
+    font-size: clamp(13px, calc(100vw*16.53/399), 20px);
+    font-weight: 800;
+    line-height: 20px;
+    line-height: clamp(16px, calc(100vw*20/399), 24px);
+    background-image: var(--secondary-color);
+    color: rgba(0,0,0,0);
+    background-clip: text;
 }
 .hero-section-info .border-corner{
     width: 8.84px;
+    width: clamp(7px, calc(100vw*8.84/399), 11px);
     height: 8.84px;
+    height: clamp(7px, calc(100vw*8.84/399), 11px);
     background-color: rgba(142, 206, 245, 1);
     border: 0.55px solid rgba(73, 149, 255, 1);
     position: absolute;
@@ -116,27 +163,27 @@ as the text serves more of a decorative role.*/
 /*positioning the .border-corner elements*/
 .hero-section-info .border-corner:nth-child(1){
     top: calc(-8.84px/2);
+    top: clamp(-4px, calc(100vw*-4.42/399), -5px);
     left: calc(-8.84px/2);
+    left: clamp(-4px, calc(100vw*-4.42/399), -5px);
 }
 .hero-section-info .border-corner:nth-child(2){
     top: calc(-8.84px/2);
+    top: clamp(-4px, calc(100vw*-4.42/399), -5px);
     right: calc(-8.84px/2);
+    right: clamp(-4px, calc(100vw*-4.42/399), -5px);
 }
 .hero-section-info .border-corner:nth-child(3){
     bottom: calc(-8.84px/2);
+    bottom: clamp(-4px, calc(100vw*-4.42/399), -5px);
     left: calc(-8.84px/2);
+    left: clamp(-4px, calc(100vw*-4.42/399), -5px);
 }
 .hero-section-info .border-corner:nth-child(4){
     bottom: calc(-8.84px/2);
+    bottom: clamp(-4px, calc(100vw*-4.42/399), -5px);
     right: calc(-8.84px/2);
-}
-.hero-section-info :nth-child(2 of .hero-text-container){
-    top: 133px;
-    left: 18px;
-}
-.hero-section-info :nth-child(3 of .hero-text-container){
-    top: 285px;
-    left: 217px;
+    right: clamp(-4px, calc(100vw*-4.42/399), -5px);
 }
 .hero-image-container{
     width: fit-content;
@@ -144,29 +191,45 @@ as the text serves more of a decorative role.*/
 }
 .hero-section-info :nth-child(1 of .hero-image-container){
     width: 160.63px;
+    width: clamp(129px, calc(100vw*160.63/399), 193px);
     height: 83.67px;
+    height: clamp(67px, calc(100vw*83.67/399), 101px);
     top: 124px;
-    left: 214px;
+    top: clamp(99px, calc(100vw*124/399), 149px);
+    right: 16px;
+    right: clamp(13px, calc(100vw*16/399), 19px);
 }
 .hero-section-info :nth-child(1 of .hero-image-container) img{
     width: 160.63px;
+    width: clamp(129px, calc(100vw*160.63/399), 193px);
     height: 83.67px;
+    height: clamp(67px, calc(100vw*83.67/399), 101px);
     z-index: -1;
 }
 .hero-section-info :nth-child(2 of .hero-image-container){
     width: 189.44px;
+    width: clamp(152px, calc(100vw*189.44/399), 228px);
     height: 111.15px;
+    height: clamp(89px, calc(100vw*111.15/399), 134px);
     top: 229px;
-    left: 18px;
+    top: clamp(184px, calc(100vw*229/399), 275px);
+    left: 16px;
+    left: clamp(13px, calc(100vw*16/399), 19px);
 }
 .hero-section-info :nth-child(2 of .hero-image-container) img{
     width: 189.44px;
+    width: clamp(152px, calc(100vw*189.44/399), 228px);
     height: 111.15px;
+    height: clamp(89px, calc(100vw*111.15/399), 134px);
     z-index: -1;
 }
 .hero-section-info .target-graphic{
     top: 340px;
-    left: 278px;
+    top: clamp(273px, calc(100vw*340/399), 409px);
+    right: 16px;
+    right: clamp(13px, calc(100vw*16/399), 19px);
     width: 80.94px;
+    width: clamp(65px, calc(100vw*80.94/399), 97px);
     height: 80.94px;
+    height: clamp(65px, calc(100vw*80.94/399), 97px);
 }

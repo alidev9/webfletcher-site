@@ -42,7 +42,7 @@ function Homepage(){
                         <div className="border-corner"></div>
                         <div className="border-corner"></div>
                         <div className="border-corner"></div>
-                        Be seen with SEO
+                        Be seen with <span> SEO</span>
                     </div>
                     <img className="target-graphic" src="/images/target-graphic.png" alt="" />
                 </div>
