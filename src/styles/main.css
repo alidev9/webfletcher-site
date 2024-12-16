@@ -45,7 +45,7 @@ body{
     }
     nav{
         height: 153px;
-        background-image: url('../assets/images/nav-cloud.svg');
+        background-image: url('../assets/images/cloud-1.svg');
         background-size: 302px 204px;
         background-repeat: no-repeat;
         background-position: -51px -59px;
@@ -124,13 +124,33 @@ body{
         position: relative;
         height: calc(100vw*420.9/399);
     }
-
+    .background-cloud-3{
+        /*background-images are placed on the z-axis based on declaration order.
+        In this case, cloud-1.svg is placed in front of cloud-3.svg*/
+        width: calc(100vw*534/399);
+        height: calc(100vw*311/399);
+        top: calc(100vw*-39/399);
+        left: calc(100vw*-61/399);
+        background-image: url('../assets/images/cloud-3-flipped.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .background-cloud-1{
+        width: calc(100vw*350/399);
+        height: calc(100vw*265/399);
+        top: calc(100vw*164/399);
+        left: calc(100vw*50/399);
+        background-image: url('../assets/images/cloud-1.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 3;
+    }
     .hero-section-info *{
         position: absolute;
     }
     /*text in hero-section-info will be sized responsively,
     as the text serves more of a decorative role.*/
-    .hero-section-info > div:not(.hero-image-container){
+    .hero-text-container{
         font-family: Inter;
         color: var(--main-color);
         border: 1.1px solid rgba(73, 149, 255, 1);
@@ -160,6 +180,7 @@ body{
         font-size: calc(100vw*16.53/399);
         font-weight: 600;
         line-height: calc(100vw*20/399);
+        z-index: 4;
     }
     .hero-section-info :nth-child(3 of .hero-text-container) span{
         margin-left: calc(100vw*4/399);
@@ -211,14 +232,15 @@ body{
         height: calc(100vw*83.67/399);
     }
     .hero-section-info :nth-child(2 of .hero-image-container){
-        width: calc(100vw*189.44/399);
-        height: calc(100vw*111.15/399);
+        width: calc(100vw*181.7/399);
+        height: calc(100vw*103.4/399);
         top: calc(100vw*229/399);
         left: calc(100vw*16/399);
+        z-index: 4;
     }
     .hero-section-info :nth-child(2 of .hero-image-container) img{
-        width: calc(100vw*189.44/399);
-        height: calc(100vw*111.15/399);
+        width: calc(100vw*181.7/399);
+        height: calc(100vw*103.4/399);
     }
     .hero-section-info .target-graphic{
         top: 340px;
@@ -226,5 +248,6 @@ body{
         right: calc(100vw*16/399);
         width: calc(100vw*80.94/399);
         height: calc(100vw*80.94/399);
+        z-index: 4;
     }
 }

@@ -28,6 +28,8 @@ function Homepage(){
                     <button className="cta-button">Explore Services</button>
                 </div>
                 <div className="hero-section-info">
+                    <div className="background-cloud-3"></div>
+                    <div className="background-cloud-1"></div>
                     <div className="hero-text-container">
                         <div className="border-corner"></div>
                         <div className="border-corner"></div>
