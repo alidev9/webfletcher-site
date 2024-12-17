@@ -5,6 +5,12 @@ import heroImage1 from './assets/images/hero-image-1.png'
 import heroImage2 from './assets/images/hero-image-2.png'
 import targetGraphic from './assets/images/target-graphic.png'
 
+import cloudImage1 from './assets/images/cloud-1.svg'
+import cloudImage3 from './assets/images/cloud-3.svg'
+
+import computerStarIcon from './assets/icons/computer-star-icon.svg'
+import databaseServerIcon from './assets/icons/database-server-1.svg'
+import personShareIcon from './assets/icons/person-share-signal-transmit.svg'
 function Homepage(){
     return (
         <>
@@ -23,13 +29,13 @@ function Homepage(){
             </nav>
             <div className="hero-section-container">
                 <div className="hero-section-cta">
-                    <h1>Your Vision, <span>Perfectly</span> Tailored</h1>
+                    <h1>Your Vision,<br/> <span>Perfectly</span> Tailored</h1>
                     <p>From custom designs to seamless functionality, we bring your vision to life. Let's build something extraordinary together.</p>
                     <button className="cta-button">Explore Services</button>
                 </div>
                 <div className="hero-section-info">
-                    <div className="background-cloud-3"></div>
-                    <div className="background-cloud-1"></div>
+                    <img className="hero-section-cloud-3" src={cloudImage3} alt=""/>
+                    <img className="hero-section-cloud-1" src={cloudImage1} alt=""/>
                     <div className="hero-text-container">
                         <div className="border-corner"></div>
                         <div className="border-corner"></div>
@@ -66,6 +72,37 @@ function Homepage(){
                         Be seen with <span> SEO</span>
                     </div>
                     <img className="target-graphic" src={targetGraphic} alt="" />
+                </div>
+            </div>
+            <div className="services-section-container">
+                <div className="services-section-cta">
+                    <h2>Our Services</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. Donec eleifend risus in metus pellentesque, sed auctor neque ornare. Etiam auctor nulla nec elementum ornare.</p>
+                    <button className="cta-button">Learn More</button>
+                </div>
+                <div className="services-section-info">
+                    <div className="service-container">
+                        <img src={computerStarIcon} alt="" />
+                        <h3>Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                    <div className="service-container">
+                        <img src={personShareIcon} alt="" />
+                        <h3>Brand Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                    <div className="service-container">
+                        <img src={databaseServerIcon} alt="" />
+                        <h3>Reliable Hosting</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                </div>
+                <div className="services-section-images">
+                    {/*Placeholder divs for future images*/}
+                    <div className="services-image-wrapper">
+                        <div className="services-image"></div>
+                        <div className="services-image"></div>
+                    </div>
                 </div>
             </div>
         </>
