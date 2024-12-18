@@ -6,6 +6,7 @@ import heroImage2 from './assets/images/hero-image-2.png'
 import targetGraphic from './assets/images/target-graphic.png'
 
 import cloudImage1 from './assets/images/cloud-1.svg'
+import cloudImage2 from './assets/images/cloud-2.svg'
 import cloudImage3 from './assets/images/cloud-3.svg'
 
 import computerStarIcon from './assets/icons/computer-star-icon.svg'
@@ -36,6 +37,7 @@ function Homepage(){
                 <div className="hero-section-info">
                     <img className="hero-section-cloud-3" src={cloudImage3} alt=""/>
                     <img className="hero-section-cloud-1" src={cloudImage1} alt=""/>
+                    <img className="hero-section-cloud-2" src={cloudImage2} alt=""/>
                     <div className="hero-text-container">
                         <div className="border-corner"></div>
                         <div className="border-corner"></div>
@@ -99,6 +101,8 @@ function Homepage(){
                 </div>
                 <div className="services-section-images">
                     {/*Placeholder divs for future images*/}
+                    <img className="services-section-cloud-1" src={cloudImage1} alt="" />
+                    <img className="services-section-cloud-2" src={cloudImage2} alt="" />
                     <div className="services-image-wrapper">
                         <div className="services-image"></div>
                         <div className="services-image"></div>
