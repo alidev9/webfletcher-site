@@ -12,6 +12,7 @@ import cloudImage3 from './assets/images/cloud-3.svg'
 import computerStarIcon from './assets/icons/computer-star-icon.svg'
 import databaseServerIcon from './assets/icons/database-server-1.svg'
 import personShareIcon from './assets/icons/person-share-signal-transmit.svg'
+import './styles/homepage.css'
 function Homepage(){
     return (
         <>

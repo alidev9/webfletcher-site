@@ -1,0 +1,23 @@
+@media(320px <= width){
+    .subform-container h2,
+    .subform-container h2 span{
+        font-family: Inter;
+        color: var(--main-color);
+        font-size: 2.13rem;
+        line-height: 2.57rem;
+    }
+    .subform-container h2{
+        font-weight: 600;
+    }
+    .subform-container h2 span{
+        font-weight: 700;
+    }
+
+    .personal-details-wrapper label{
+        font-family: "Open Sans";
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.7rem;
+        display: block;
+    }
+}

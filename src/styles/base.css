@@ -1,0 +1,36 @@
+/*CSS resets*/
+ul{
+    padding: 0;
+    margin: 0;
+}
+ol{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+p,h1,h2,h3{
+    margin: 0;
+}
+html{
+    width: 100%;
+}
+body{
+    margin: 0;
+}
+
+:root{
+    /*Colors*/
+    /*Used as background and color for some text*/
+    --white: rgba(242, 248, 255, 1);
+    --main-color: rgba(16, 46, 70, 1);
+    --main-color-deemphasize: rgba(16, 46, 70, 0.8);
+    /*Applying linear-gradients as colors sometimes requires workarounds,
+    because the linear-gradient CSS function returns an image.*/
+    --secondary-color: linear-gradient(90deg, #3FB3FF 0%, #599EFF 100%);
+}
