@@ -1,6 +1,11 @@
+import {useState} from 'react'
 import './styles/website-form.css'
 import companyLogo from './assets/images/company-logo.png'
 function WebsiteForm(){
+    const [webpageCount, setWebpageCount] = useState(1)
+    function addWebpage(){
+        setWebpageCount(x => x + 1);
+    }
     return (
         <>
         <nav>
@@ -43,9 +48,18 @@ function WebsiteForm(){
                             <input type="checkbox" id="webpage-noinfo" name="webpageNoInfo"/>
                             <label htmlFor="webpage-noinfo">I don't know</label>
                         </div>
-                        <label htmlFor="webpage-1" className="webpage-info-label">Webpage 1:</label>
-                        <textarea name="webpage1" id="webpage-1" className="webpage-info-textarea" placeholder="Webpage 1 will be about..."></textarea>
-                        <button type="button" className="webpage-info-button">+ Add Webpage</button>
+                        {Array.from({ length: webpageCount}).map((_, index) => {
+                            const currentPage = index + 1;
+                            return (
+                                <>
+                                    <label htmlFor={`webpage-${currentPage}`} className="webpage-info-label">
+                                        {`Webpage ${currentPage}:`}
+                                    </label>
+                                    <textarea name={`webpage${currentPage}`} id={`webpage-${currentPage}`} className="webpage-info-textarea" placeholder={`Webpage ${currentPage} will be about...`}></textarea>
+                                </>
+                            )
+                        })}
+                        <button type="button" className="webpage-info-button" onClick={addWebpage}>+ Add Webpage</button>
                     </fieldset>
                 </div>
             </div>

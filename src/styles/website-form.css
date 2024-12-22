@@ -152,7 +152,6 @@
         display: flex;
         align-items: center;
         margin-top: 20px;
-        margin-bottom: 15px;
         gap: 0.39rem;
     }
     label[for="webpage-noinfo"]{
@@ -171,6 +170,7 @@
         color: var(--main-color-deemphasize);
         font-size: 1rem;
         margin-bottom: 9px;
+        margin-top: 15px;
     }
     .webpage-info-textarea{
         margin-top: 0px;
@@ -185,5 +185,7 @@
         font-weight: 700;
         height: 24.2px;
         margin-top: 18px;
+        padding: 5.417px 37.917px;
+        box-sizing: content-box;
     }
 }
