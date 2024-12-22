@@ -61,6 +61,18 @@ function WebsiteForm(){
                         })}
                         <button type="button" className="webpage-info-button" onClick={addWebpage}>+ Add Webpage</button>
                     </fieldset>
+                    <div className="additional-details-wrapper">
+                        <label htmlFor="additional-details">Any small details or important must have details you'd like the site to highlight?</label>
+                        <textarea name="additionalDetails" id="additional-details" placeholder="I want to highlight..."></textarea>
+                    </div>
+                    <div className="design-questions-wrapper">
+                        <label htmlFor="design-style">What design style would you like?</label>
+                        <textarea name="designStyle" id="design-style" placeholder="Tell us about your colour scheme..."></textarea>
+                        <label htmlFor="color-theme">What color theme would you like best?</label>
+                        <textarea name="colorTheme" id="color-theme" placeholder="Tell us about your colour scheme..."></textarea>
+                    </div>
+                    <label htmlFor="image-upload">Any images you would like to include in the site?</label>
+                    <input type="file" accept="image/*" id="image-upload" name="imageUpload" />
                 </div>
             </div>
         </>
