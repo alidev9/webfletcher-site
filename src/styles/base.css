@@ -33,4 +33,6 @@ body{
     /*Applying linear-gradients as colors sometimes requires workarounds,
     because the linear-gradient CSS function returns an image.*/
     --secondary-color: linear-gradient(90deg, #3FB3FF 0%, #599EFF 100%);
+    --carousel-circle-selected: rgba(88, 115, 147, 1);
+    --carousel-circle-not-selected: rgba(201, 220, 242, 1);
 }

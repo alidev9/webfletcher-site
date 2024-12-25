@@ -1,9 +1,9 @@
-//import Homepage from "./Homepage";
-import WebsiteForm from "./WebsiteForm"
+import Homepage from "./Homepage"
+//import WebsiteForm from "./WebsiteForm"
 
 function App() {
   return (
-    <WebsiteForm></WebsiteForm>
+    <Homepage></Homepage>
   );
 }
 

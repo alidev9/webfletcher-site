@@ -1,6 +1,13 @@
 import {useState} from 'react'
 import './styles/website-form.css'
 import companyLogo from './assets/images/company-logo.png'
+
+import artistPaletteIcon from './assets/form-images/artist-palette.png'
+import openBookIcon from './assets/form-images/open-book.png'
+import placardIcon from './assets/form-images/placard.png'
+import puzzlePieceIcon from './assets/form-images/puzzle-piece.png'
+import vectorIcon from './assets/form-images/Vector.svg'
+
 function WebsiteForm(){
     const [webpageCount, setWebpageCount] = useState(1)
     function addWebpage(){
@@ -9,7 +16,7 @@ function WebsiteForm(){
     return (
         <>
         <nav>
-            <a href="https://www.google.com"><button>&larr; Back to the website</button></a>
+            <a href="#"><button>&larr; Back to the website</button></a>
             <div className="company-name">
                 <img src={companyLogo} alt=""/>
                 <span>WebFletcher</span>
@@ -37,10 +44,10 @@ function WebsiteForm(){
                 <div className="subform-fields-container">
                     <label htmlFor="website-type">What type of website do you require?</label>
                     <select name="websiteType" id="website-type">
-                        <option value="billboard">Billboard site</option>
-                        <option value="brochure">Brochure site</option>
-                        <option value="branded">Branded site</option>
-                        <option value="custom">Custom site</option>
+                        <option value="billboard"><img src={placardIcon} alt="" />Billboard site</option>
+                        <option value="brochure"><img src={openBookIcon} alt="" />Brochure site</option>
+                        <option value="branded"><img src={artistPaletteIcon} alt="" />Branded site</option>
+                        <option value="custom"><img src={puzzlePieceIcon} alt="" />Custom site</option>
                     </select>
                     <fieldset>
                         <legend>Tell us about each webpage and text you would like to include:</legend>

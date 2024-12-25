@@ -384,28 +384,29 @@ body{
         left: calc(100vw*75/399);
     }
 
-    .features-intro-container{
+    .intro-container{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         margin-bottom: 63px;
     }
-    .features-intro-container .subheader{
+    .intro-container .subheader{
         font-family: Inter;
         font-size: 1.25rem;
         font-weight: 500;
         line-height: 1.51rem;
         color: rgba(73, 149, 255, 1);
     }
-    .features-intro-container h2{
+    .intro-container h2{
         font-family: Inter;
         font-size: 2.5rem;
         font-weight: 700;
         line-height: 3.03rem;
         color: var(--main-color);
         margin-bottom: 31px;
+        text-align: center;
     }
-    .features-intro-container p{
+    .intro-container p{
         font-family: Inter;
         font-size: 1.12rem;
         font-weight: 500;
@@ -437,6 +438,7 @@ body{
         font-size: 1.54rem;
         font-weight: 600;
         line-height: 1.87rem;
+        text-align: center;
         color: var(--main-color);
         
         margin: 29.04px 0;
@@ -454,5 +456,86 @@ body{
     }
     .feature-container .feature-number{
         display: none;
+    }
+
+    .testimonials-section-container{
+        background-color: rgba(229, 241, 255, 1);
+        padding-top: 46px;
+    }
+    .testimonials-section-container .intro-container h2{
+        width: 300px;
+    }
+
+    .testimonial-carousel-container{
+        display: flex;
+        overflow-x: auto;
+        gap: 4.01vw;
+        padding: 0 7.52vw;
+
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    .testimonial-carousel-container {
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For IE/Edge [4, 11] */
+    }
+    .testimonial-carousel-container::-webkit-scrollbar { 
+        /* For Chrome, Safari, Opera [3, 5, 11] */
+        display: none;
+    }
+    .testimonial{
+        font-family: "Inter";
+        min-width: 83.46vw;
+        padding: 10.03vw 7.52vw;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        row-gap: 20px;
+        column-gap: 5.1vw;
+        background-color: rgba(201, 220, 242, 1);
+        overflow-y: auto;
+        border-radius: 10px;
+
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+    .testimonial img{
+        border-radius: 50%;
+    }
+    .testimonial .customer-name{
+        color: var(--main-color);
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.51rem;
+    }
+    .testimonial .customer-position{
+        color: rgba(16, 46, 70, 0.5);
+        font-weight: 600;
+        line-height: 1.51em;
+
+    }
+    .testimonial p{
+        grid-column: 1 / 3;
+        color: var(--main-color-deemphasize);
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+    .carousel-circle-wrapper{
+        display: flex;
+        margin: 8px auto 0 auto;
+        width: fit-content;
+        gap: 0.75rem;
+    }
+    .carousel-circle{
+        width: 2.95vw;
+        height: 2.95vw;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .carousel-circle.not-selected{
+        background-color: var(--carousel-circle-not-selected);
+    }
+    .carousel-circle.selected{
+        background-color: var(--carousel-circle-selected);
     }
 }

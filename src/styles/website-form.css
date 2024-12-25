@@ -10,10 +10,11 @@
         width: calc(100vw*361/393);
         margin: 0 auto 71px auto;
         justify-content: space-between;
+        align-items: center;
     }
     nav button{
-        width: 8.23rem;
-        height: 1.56rem;
+        width: clamp(107.22px, calc(100vw*131.68/393), 131.68px);
+        height: clamp(20.32px, calc(100vw*24.96/393), 24.96px);
         background-image: var(--secondary-color);
         border: none;
         border-radius: 0.62rem;
@@ -27,14 +28,14 @@
     .company-name{
         display: flex;
         align-items: center;
-        gap: 21.96px;
+        gap: clamp(17.88px, calc(100vw*21.96/393), 21.96px);
     }
     .company-name span{
         color: var(--main-color);
         font-family: "Inter";
-        font-size: 16px;
+        font-size: clamp(13.03px, calc(100vw*16/393), 16px);
         font-weight: 700;
-        letter-spacing: 1.6px;
+        letter-spacing: clamp(1.3px, calc(100vw*1.6/393), 1.6px);
     }
     label, legend{
         color: var(--main-color);
@@ -47,8 +48,8 @@
     .subform-container h2 span{
         font-family: Inter;
         color: var(--main-color);
-        font-size: 2.13rem;
-        line-height: 2.57rem;
+        font-size: clamp(27.68px, calc(100vw*34/393), 34px);
+        line-height: clamp(32.57px, calc(100vw*40/393), 40px);
     }
     .subform-container h2{
         font-weight: 600;
@@ -58,7 +59,7 @@
         margin-bottom: 22px;
     }
     /*Every h2 aside from the first h2 of a .subform-container*/
-    h2:not(:nth-child(1 of .subform-container) h2){
+    .subform-container h2:not(:nth-child(1 of .subform-container) h2){
         margin-top: 90px;
         margin-bottom: 90px;
     }
@@ -121,14 +122,17 @@
         margin-bottom: 32px;
     }
 
+    .subform-2 h2{
+        width: clamp(293.94px, calc(100vw*361/393), 361px);
+        margin: 0 auto;
+    }
     .subform-2 h2 span:nth-of-type(2){
         font-family: "Lily Script One";
-        font-size: 3rem;
+        font-size: clamp(39.08px, calc(100vw*48/393), 48px);
         font-weight: 400;
         background-image: var(--secondary-color);
         color: rgba(0,0,0,0);
         background-clip: text;
-        line-height: 2.5rem;
     }
     .subform-2 label,
     fieldset legend{
@@ -139,6 +143,13 @@
     }
     .subform-2 select{
         margin-bottom: 40px;
+        height: 75.74px;
+    }
+    option[value="billboard"]::before{
+        content: url('../assets/form-images/placard.png');
+        display: block;
+        width: 72px;
+        height: 72px;
     }
     fieldset{
         border: none;
@@ -187,5 +198,11 @@
         margin-top: 18px;
         padding: 5.417px 37.917px;
         box-sizing: content-box;
+    }
+    .additional-details-wrapper{
+        display: contents;
+    }
+    .design-questions-wrapper{
+        display: contents;
     }
 }

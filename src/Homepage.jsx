@@ -12,8 +12,23 @@ import cloudImage3 from './assets/images/cloud-3.svg'
 import computerStarIcon from './assets/icons/computer-star-icon.svg'
 import databaseServerIcon from './assets/icons/database-server-1.svg'
 import personShareIcon from './assets/icons/person-share-signal-transmit.svg'
+
+import customerProfileImage from './assets/images/customer-profile-image.png'
 import './styles/homepage.css'
 function Homepage(){
+    function viewTestimonial(e){
+        const testimonialPosition = e.target.dataset.position;
+        const targetTestimonial = document.querySelector(`:nth-child(${testimonialPosition} of .testimonial)`);
+        targetTestimonial.scrollIntoView({block: 'nearest', inline: 'start', behavior: 'smooth'});
+
+        //clear previously selected circle
+        if(document.querySelector('.carousel-circle.selected')){
+            const previouslySelectedCircle = document.querySelector('.carousel-circle.selected'); 
+            previouslySelectedCircle.classList.remove('selected');
+            previouslySelectedCircle.classList.add('not-selected');
+        }
+        e.target.classList.add('selected');
+    }
     return (
         <>
             <nav>
@@ -111,7 +126,7 @@ function Homepage(){
                 </div>
             </div>
             <div className="features-section-container">
-                <div className="features-intro-container">
+                <div className="intro-container">
                     <div className="subheader">Invest</div>
                     <h2>Why choose us</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. Donec eleifend risus in metus pellentesque, sed auctor neque ornare. Etiam auctor nulla nec elementum ornare.</p>
@@ -133,6 +148,53 @@ function Homepage(){
                     <h3>Long-term partnership</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
                     <div className="feature-number">03.</div>
+                </div>
+            </div>
+            <div className="testimonials-section-container">
+                <div className="intro-container">
+                    <div className="subheader">Testimonials</div>
+                    <h2>What Our Clients Say</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. Donec eleifend risus in metus pellentesque, sed auctor neque ornare. Etiam auctor nulla nec elementum ornare.</p>
+                </div>
+                <div className="testimonial-carousel-container">
+                    <div className="testimonial">
+                        <img src={customerProfileImage} alt="" className="customer-picture" />
+                        <div className="customer-info-wrapper">
+                            <h3 className="customer-name">Patrick Bateman</h3>
+                            <div className="customer-position">CEO</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                    <div className="testimonial">
+                        <img src={customerProfileImage} alt="" className="customer-picture" />
+                        <div className="customer-info-wrapper">
+                            <h3 className="customer-name">Patrick Bateman</h3>
+                            <div className="customer-position">CEO</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                    <div className="testimonial">
+                        <img src={customerProfileImage} alt="" className="customer-picture" />
+                        <div className="customer-info-wrapper">
+                            <h3 className="customer-name">Patrick Bateman</h3>
+                            <div className="customer-position">CEO</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                    <div className="testimonial">
+                        <img src={customerProfileImage} alt="" className="customer-picture" />
+                        <div className="customer-info-wrapper">
+                            <h3 className="customer-name">Patrick Bateman</h3>
+                            <div className="customer-position">CEO</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                    </div>
+                </div>
+                <div className="carousel-circle-wrapper">
+                    <div className="carousel-circle not-selected" data-position="1" onClick={viewTestimonial}></div>
+                    <div className="carousel-circle not-selected" data-position="2" onClick={viewTestimonial}></div>
+                    <div className="carousel-circle not-selected" data-position="3" onClick={viewTestimonial}></div>
+                    <div className="carousel-circle not-selected" data-position="4" onClick={viewTestimonial}></div>
                 </div>
             </div>
         </>
