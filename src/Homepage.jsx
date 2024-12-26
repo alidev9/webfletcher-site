@@ -35,7 +35,6 @@ function Homepage(){
             return;
         }
         const circleIndex = visibleTestimonialBox.dataset.position;
-        console.log(circleIndex);
         const circleElement = document.querySelector(`.carousel-circle[data-position="${circleIndex}"]`)
         //clear previously selected circle
         if(document.querySelector('.carousel-circle.selected')){
@@ -212,6 +211,17 @@ function Homepage(){
                     <div className="carousel-circle not-selected" data-position="3" onClick={viewTestimonial}></div>
                     <div className="carousel-circle not-selected" data-position="4" onClick={viewTestimonial}></div>
                 </div>
+            </div>
+            <div className="closing-section-container">
+                <div className="closing-image-wrapper">
+                    <div className="closing-image"></div>
+                    <div className="closing-image"></div>
+                    <div className="closing-image"></div>
+                </div>
+                <h2>Design your <span>unique</span> web presence right away</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. </p>
+                <button className="cta-button">Get Started!</button>
+                <div>Any inquiries? <a href="#">Contact sales</a></div>
             </div>
         </>
     )
