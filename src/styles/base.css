@@ -36,3 +36,102 @@ body{
     --carousel-circle-selected: rgba(88, 115, 147, 1);
     --carousel-circle-not-selected: rgba(201, 220, 242, 1);
 }
+
+@media (320px <= width){
+    #root{
+        background-color: var(--white);
+        width: 100%;
+    }
+    nav{
+        height: 153px;
+        background-image: url('../assets/images/cloud-1.svg');
+        background-size: 302px 204px;
+        background-repeat: no-repeat;
+        background-position: -51px -59px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 51px 18px 71px 18px;
+    }
+    .homepage-link a{
+        display: flex;
+        align-items: center;
+        gap: 21.96px;
+    }
+    .homepage-link span{
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 19.36px;
+        letter-spacing: 0.1em;
+        color: var(--main-color);
+    }
+    footer{
+        background-color: rgba(192, 215, 240, 1);
+        font-family: "Inter";
+        padding: 49.03px 0 42px 0;
+    }
+    .company-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30.97px;
+    }
+    footer .company-logo img{
+        width: 43.3px;
+    }
+    footer .company-logo span{
+        color: var(--main-color);
+        font-size: 1.89rem;
+        font-weight: 700;
+        line-height: 2.28rem;
+        letter-spacing: 0.1em;
+        margin-left: 18.1px;
+    }
+    footer p:nth-of-type(1){
+        color: var(--main-color-deemphasize);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        text-align: center;
+        max-width: 340px;
+        margin: 0 auto 60px auto;
+    }
+    .footer-wrapper{
+        text-align: center;
+        margin: 0 auto;
+    }
+    :nth-last-child(1 of .footer-wrapper){
+        margin-bottom: 60px;
+    }
+    .footer-wrapper h2{
+        color: var(--main-color);
+        font-size: 1.56rem;
+        font-weight: 700;
+        line-height: 1.89rem;
+        margin-bottom: 25px; 
+    }
+    .footer-wrapper div{
+        color: var(--main-color-deemphasize);
+        font-family: Inter;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.51rem;
+    }
+    .footer-wrapper div:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .resources-links-wrapper,
+    .legal-links-wrapper{
+        margin-bottom: 73px;
+    }
+    footer .copyright-text{
+        color: var(--main-color-deemphasize);
+        font-size: 0.88rem;
+        font-weight: 700;
+        line-height: 1.3rem;
+        max-width: 348px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

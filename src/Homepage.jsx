@@ -1,6 +1,3 @@
-
-import companyLogo from './assets/images/company-logo.png'
-import menuToggle from './assets/images/hamburger-menu-toggle.png'
 import heroImage1 from './assets/images/hero-image-1.png'
 import heroImage2 from './assets/images/hero-image-2.png'
 import targetGraphic from './assets/images/target-graphic.png'
@@ -45,20 +42,7 @@ function Homepage(){
         circleElement.classList.add('selected');
     }
     return (
-        <>
-            <nav>
-                <ul>
-                    <li className="homepage-link">
-                        <a href="#">
-                            <img src={companyLogo} alt="Webfletcher Logo" />
-                            <span>WebFletcher</span>
-                        </a>
-                    </li>
-                    <li>
-                        <img src={menuToggle} alt="Menu Toggle" />
-                    </li>
-                </ul>
-            </nav>
+        <main>
             <div className="hero-section-container">
                 <div className="hero-section-cta">
                     <h1>Your Vision,<br/> <span>Perfectly</span> Tailored</h1>
@@ -223,7 +207,7 @@ function Homepage(){
                 <button className="cta-button">Get Started!</button>
                 <div>Any inquiries? <a href="#">Contact sales</a></div>
             </div>
-        </>
+        </main>
     )
 }
 
