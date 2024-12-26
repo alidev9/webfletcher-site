@@ -461,6 +461,7 @@ body{
     .testimonials-section-container{
         background-color: rgba(229, 241, 255, 1);
         padding-top: 46px;
+        padding-bottom: 45.2px;
     }
     .testimonials-section-container .intro-container h2{
         width: 300px;

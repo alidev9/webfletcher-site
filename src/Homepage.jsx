@@ -20,14 +20,30 @@ function Homepage(){
         const testimonialPosition = e.target.dataset.position;
         const targetTestimonial = document.querySelector(`:nth-child(${testimonialPosition} of .testimonial)`);
         targetTestimonial.scrollIntoView({block: 'nearest', inline: 'start', behavior: 'smooth'});
-
+    }
+    let scrollTimeout;
+    function selectCarouselCircle(e){
+        const testimonialArray = document.querySelectorAll('.testimonial');
+        const visibleTestimonialBox = Array.from(testimonialArray).find((testimonialBox) => {
+            const rect = testimonialBox.getBoundingClientRect();
+            return (
+                rect.left >= 0 &&
+                rect.right <= document.documentElement.clientWidth
+            )
+        })
+        if(!visibleTestimonialBox){
+            return;
+        }
+        const circleIndex = visibleTestimonialBox.dataset.position;
+        console.log(circleIndex);
+        const circleElement = document.querySelector(`.carousel-circle[data-position="${circleIndex}"]`)
         //clear previously selected circle
         if(document.querySelector('.carousel-circle.selected')){
             const previouslySelectedCircle = document.querySelector('.carousel-circle.selected'); 
             previouslySelectedCircle.classList.remove('selected');
             previouslySelectedCircle.classList.add('not-selected');
         }
-        e.target.classList.add('selected');
+        circleElement.classList.add('selected');
     }
     return (
         <>
@@ -156,8 +172,8 @@ function Homepage(){
                     <h2>What Our Clients Say</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. Donec eleifend risus in metus pellentesque, sed auctor neque ornare. Etiam auctor nulla nec elementum ornare.</p>
                 </div>
-                <div className="testimonial-carousel-container">
-                    <div className="testimonial">
+                <div className="testimonial-carousel-container" onScroll={selectCarouselCircle}>
+                    <div className="testimonial" onScroll={selectCarouselCircle} data-position="1">
                         <img src={customerProfileImage} alt="" className="customer-picture" />
                         <div className="customer-info-wrapper">
                             <h3 className="customer-name">Patrick Bateman</h3>
@@ -165,7 +181,7 @@ function Homepage(){
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
                     </div>
-                    <div className="testimonial">
+                    <div className="testimonial" onScroll={selectCarouselCircle} data-position="2">
                         <img src={customerProfileImage} alt="" className="customer-picture" />
                         <div className="customer-info-wrapper">
                             <h3 className="customer-name">Patrick Bateman</h3>
@@ -173,7 +189,7 @@ function Homepage(){
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
                     </div>
-                    <div className="testimonial">
+                    <div className="testimonial" onScroll={selectCarouselCircle} data-position="3">
                         <img src={customerProfileImage} alt="" className="customer-picture" />
                         <div className="customer-info-wrapper">
                             <h3 className="customer-name">Patrick Bateman</h3>
@@ -181,7 +197,7 @@ function Homepage(){
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
                     </div>
-                    <div className="testimonial">
+                    <div className="testimonial" onScroll={selectCarouselCircle} data-position="4">
                         <img src={customerProfileImage} alt="" className="customer-picture" />
                         <div className="customer-info-wrapper">
                             <h3 className="customer-name">Patrick Bateman</h3>
