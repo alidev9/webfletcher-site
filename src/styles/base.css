@@ -41,6 +41,7 @@ body{
     #root{
         background-color: var(--white);
         width: 100%;
+        overflow-x: clip;
     }
     nav{
         height: 153px;

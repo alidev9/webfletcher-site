@@ -18,7 +18,6 @@ function Homepage(){
         const targetTestimonial = document.querySelector(`:nth-child(${testimonialPosition} of .testimonial)`);
         targetTestimonial.scrollIntoView({block: 'nearest', inline: 'start', behavior: 'smooth'});
     }
-    let scrollTimeout;
     function selectCarouselCircle(e){
         const testimonialArray = document.querySelectorAll('.testimonial');
         const visibleTestimonialBox = Array.from(testimonialArray).find((testimonialBox) => {
@@ -150,6 +149,7 @@ function Homepage(){
                 </div>
             </div>
             <div className="testimonials-section-container">
+                <img className="testimonial-section-cloud-3" src={cloudImage3} alt="" />
                 <div className="intro-container">
                     <div className="subheader">Testimonials</div>
                     <h2>What Our Clients Say</h2>
@@ -205,7 +205,9 @@ function Homepage(){
                 <h2>Design your <span>unique</span> web presence right away</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. </p>
                 <button className="cta-button">Get Started!</button>
-                <div>Any inquiries? <a href="#">Contact sales</a></div>
+                <div>Any inquiries? <a href="#">Contact sales</a>
+                <img src={cloudImage3} alt="" className="closing-section-cloud-3" />
+                </div>
             </div>
         </main>
     )

@@ -399,6 +399,14 @@
         background-color: rgba(229, 241, 255, 1);
         padding-top: 46px;
         padding-bottom: 45.2px;
+        position: relative;
+    }
+    .testimonial-section-cloud-3{
+        width: clamp(167.62px, 52.38vw, 251.42px);
+        position: absolute;
+        /*the change in parent height isn't proportional to viewport width changes, as such vw isn't used to calculate how a cloud is displaced.*/
+        top: 93.76%;
+        right: 64.91vw;
     }
     .testimonials-section-container .intro-container h2{
         width: 300px;
@@ -538,9 +546,17 @@
         color: rgba(16, 46, 70, 0.7);
         margin: 0 auto;
         text-align: center;
+        position: relative;
     }
     .closing-section-container .cta-button+div a{
         color: rgba(73, 149, 255, 1);
         text-decoration: underline;
+    }
+    .closing-section-cloud-3{
+        width: clamp(164.37px, 51.37vw, 204.95px);
+        transform: scale(-1, 1);
+        position: absolute;
+        top: -25px;
+        left: 261px;
     }
 }
