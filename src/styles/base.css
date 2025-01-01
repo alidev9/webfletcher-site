@@ -46,14 +46,15 @@ body{
     nav{
         height: 153px;
         background-image: url('../assets/images/cloud-1.svg');
-        background-size: 302px 204px;
+        background-size: 302px auto;
         background-repeat: no-repeat;
-        background-position: -51px -59px;
+        background-position-x: -60px;
+        background-position-y: -78px;
     }
     nav ul{
         display: flex;
         justify-content: space-between;
-        padding: 51px 18px 71px 18px;
+        padding: 45px 26px 0 26px;
     }
     .homepage-link a{
         display: flex;
@@ -61,11 +62,14 @@ body{
         gap: 21.96px;
     }
     .homepage-link span{
-        font-family: Inter;
+        font-family: "Inter";
         font-weight: 700;
         line-height: 19.36px;
         letter-spacing: 0.1em;
         color: var(--main-color);
+    }
+    .homepage-link img{
+        width: 31px;
     }
     footer{
         background-color: rgba(192, 215, 240, 1);
@@ -135,4 +139,26 @@ body{
         margin: 0 auto;
         text-align: center;
     }
+}
+
+@media (480px <= width){
+    nav{
+        height: 29.42vw;
+        background-size: 64.99vw auto;
+        background-position-x: -14.51vw;
+        background-position-y: -19.9vw;
+    }
+    nav ul{
+        padding: 5.4vw 26px 0 26px;
+    }
+    .homepage-link span{
+        font-size: 2.55vw;
+    }
+    .homepage-link img{
+        width: 4.68vw;
+    }
+    nav img[alt="Menu Toggle"]{
+        width: 4.05vw;
+    }
+    
 }

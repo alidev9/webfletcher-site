@@ -1,8 +1,7 @@
 import Homepage from "./Homepage"
 //import WebsiteForm from "./WebsiteForm"
-import companyLogo from './assets/images/company-logo.png'
+import companyLogo from './assets/images/company-logo.svg'
 import menuToggle from './assets/images/hamburger-menu-toggle.png'
-import footerStar from './assets/images/footer-star.svg'
 import {Link, Routes, Route} from 'react-router'
 import './styles/base.css'
 
@@ -29,7 +28,7 @@ function App() {
       </Routes>
       <footer>
         <div className="company-logo">
-          <img src={footerStar} alt="" />
+          <img src={companyLogo} alt="" />
           <span>WebFletcher</span>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque</p>

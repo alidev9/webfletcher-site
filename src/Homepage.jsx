@@ -51,6 +51,7 @@ function Homepage(){
                 <div className="hero-section-info">
                     <img className="hero-section-cloud-3" src={cloudImage3} alt=""/>
                     <img className="hero-section-cloud-1" src={cloudImage1} alt=""/>
+                    <img className="hero-section-cloud-2-1" src={cloudImage2} alt="" />
                     <img className="hero-section-cloud-2" src={cloudImage2} alt=""/>
                     <div className="hero-text-container">
                         <div className="border-corner"></div>
@@ -190,7 +191,7 @@ function Homepage(){
                     </div>
                 </div>
                 <div className="carousel-circle-wrapper">
-                    <div className="carousel-circle not-selected" data-position="1" onClick={viewTestimonial}></div>
+                    <div className="carousel-circle selected" data-position="1" onClick={viewTestimonial}></div>
                     <div className="carousel-circle not-selected" data-position="2" onClick={viewTestimonial}></div>
                     <div className="carousel-circle not-selected" data-position="3" onClick={viewTestimonial}></div>
                     <div className="carousel-circle not-selected" data-position="4" onClick={viewTestimonial}></div>
