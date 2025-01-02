@@ -10,7 +10,7 @@
 
 @media (320px <= width){
     .hero-section-container{
-        height: getVwMobile(820);
+        height: fit-content;
         margin-bottom: getVwMobile(38.06);
     }
     .hero-section-cta{
@@ -81,6 +81,7 @@
         top: -12.3vw;
         left: -14.1vw;
         transform: scale(-1, 1);
+        z-index: 2;
     }
     .hero-section-cloud-1{
         width: getVwMobile(350);
@@ -208,7 +209,10 @@
         height: getVwMobile(80.94);
         z-index: 4;
     }
-
+    .hero-section-container .extra-space{
+        width: 100%;
+        height: 38.06px;
+    }
     .services-section-cta{
         display: flex;
         flex-flow: column nowrap;
@@ -570,7 +574,7 @@
     }
     .closing-section-cloud-3{
         width: clamp(164.37px, 51.37vw, 204.95px);
-        transform: scale(-1, 1);
+        transform: rotate(10.31deg) scale(-1, 1);
         position: absolute;
         top: -25px;
         left: 261px;
@@ -579,7 +583,7 @@
 
 @media(480px <= width){
     .hero-section-container{
-        height: getVwTablet(1333.2);
+        height: fit-content;
         margin-bottom: 0;
     }
     .hero-section-cta h1{
@@ -598,6 +602,7 @@
     }
     .hero-section-info{
         margin-top: 0;
+        height: getVwTablet(920);
     }
     /*The text boxes needed to be adjusted before the clouds*/
     .hero-section-info :nth-child(1 of .hero-text-container){
@@ -701,8 +706,12 @@
         top: getVwTablet(600);
         left: getVwTablet(-177);
     }
+    .hero-section-container .extra-space{
+        width: 100%;
+        height: 50px;
+    }
     .services-section-cta{
-        margin-top: 56.55px;
+        margin-top: 0;
     }
     .services-section-cta h2{
         font-size: 3rem;
@@ -714,8 +723,124 @@
     .services-section-info{
         max-width: 415px;
     }
+    .services-section-images{
+        height: getVwTablet(769);
+    }
+    .services-section-cloud-1{
+        width: getVwTablet(250*1.25);
+        height: getVwTablet(166*1.25);
+        left: 76.8vw;
+        top: -9vw;
+    }
     .services-image-wrapper{
-        max-width: 438px;
+        width: getVwTablet(533);
+        height: getVwTablet(599);
+        top: getVwTablet(50);
+    }
+    :nth-child(1 of .services-image){
+        width: getVwTablet(396);
+        height: getVwTablet(515);
+    }
+    :nth-child(2 of .services-image){
+        width: getVwTablet(410);
+        height: getVwTablet(315);
+        top: getVwTablet(284);
+        left: getVwTablet(123);
+    }
+    .services-section-cloud-2{
+        display: none;
+    }
+
+    .intro-container .subheader{
+        font-size: 1.56rem;
+        line-height: 1.89rem;
+    }
+    .intro-container h2{
+        font-size: 3rem;
+        line-height: 3.63rem;
+    }
+    .intro-container p{
+        max-width: 774px;
+        margin: 0 30px;
+    }
+    .testimonials-section-container .intro-container h2{
+        font-size: 2.81rem;
+        width: auto;
+        max-width: 468px;
+        margin: 0 18px 16px 18px;
+    }
+    .testimonials-section-container .intro-container p{
+        font-size: 1.25rem;
+        line-height: 1.87rem;
+        max-width: 663px;
+        margin: 0 40px;
+    }
+    .testimonial-section-cloud-3{
+        width: clamp(131.61px, getVwTablet(343), 343px);
+        right: 76.9vw;
+    }
+    .testimonial-carousel-container{
+        /*additional padding on either sides centers the first and last elements of the carousel*/
+        padding: 0 getVwTablet(180);
+        gap: getVwTablet(73);
+    }
+    .testimonial{
+        padding: 40px 30px;
+        min-width: getVwTablet(472);
+    }
+    .testimonial .customer-name{
+        font-size: 1.37rem;
+        line-height: 1.66rem;
+    }
+    .testimonial .customer-position{
+        font-size: 1.12rem;
+        line-height: 1.69rem;
+    }
+    .testimonial p{
+        font-size: 1.12rem;
+        line-height: 1.87rem;
+    }
+    .carousel-circle-wrapper{
+        margin: 47px auto 0 auto;
+    }
+    .carousel-circle{
+        width: getVwTablet(11.8);
+        height: getVwTablet(11.8);
+    }
+    .closing-section-container{
+        max-width: 774px;
+    }
+    .closing-image-wrapper{
+        margin-bottom: 141.94px;
+    }
+    .closing-image{
+        width: clamp(72.2px, getVwTablet(188.16), 188.16px);
+        height: clamp(102.85px, getVwTablet(268.05), 268.05px);
+        border-radius: clamp(6.81px, getVwTablet(17.75), 17.75px);
+    }
+    :nth-child(1 of .closing-image),
+    :nth-child(3 of .closing-image){
+        top: clamp(26.35px, getVwTablet(68.67), 68.67px);
+    }
+    :nth-child(2 of .closing-image){
+        margin: 0 getVwTablet(32);
+    }
+    .closing-section-container h2{
+        font-size: 3rem;
+        line-height: 3.63rem;
+        margin: 0 auto 40px auto;
+        max-width: 727px;
+    }
+    .closing-section-container p{
+        font-size: 1.25rem;
+        line-height: 1.87rem;
+        margin: 0 30px 40px 30px;
+    }
+    .closing-section-cloud-3{
+        width: getVwTablet(343);
+        height: auto;
+        top: clamp(-12.35vw, -12.3vw, -14.4vw);
+        left: clamp(73.9vw, 64.9vw, 57.9vw);
     }
 }
 

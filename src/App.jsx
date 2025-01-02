@@ -32,21 +32,23 @@ function App() {
           <span>WebFletcher</span>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque</p>
-        <div className="resources-links-wrapper footer-wrapper">
-          <h2>Resources</h2>
-          <div>FAQ</div>
-          <div>Support</div>
-          <div>Careers</div>
-        </div>
-        <div className="legal-links-wrapper footer-wrapper">
-          <h2>Legal</h2>
-          <div>Privacy Policy</div>
-          <div>Terms of Service</div>
-        </div>
-        <div className="contact-info-wrapper footer-wrapper">
-          <h2>Contact Us</h2>
-          <div className="email">example@hotmail.com</div>
-          <div className="phone-number">+123456789</div>
+        <div className="links-wrapper">
+          <div className="resources-links-wrapper footer-wrapper">
+            <h2>Resources</h2>
+            <div>FAQ</div>
+            <div>Support</div>
+            <div>Careers</div>
+          </div>
+          <div className="legal-links-wrapper footer-wrapper">
+            <h2>Legal</h2>
+            <div>Privacy Policy</div>
+            <div>Terms of Service</div>
+          </div>
+          <div className="contact-info-wrapper footer-wrapper">
+            <h2>Contact Us</h2>
+            <div className="email">example@hotmail.com</div>
+            <div className="phone-number">+123456789</div>
+          </div>
         </div>
         <div className="copyright-text">Copyright © 2024 WebFletcher. All rights reserved</div>
       </footer>

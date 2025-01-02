@@ -160,5 +160,22 @@ body{
     nav img[alt="Menu Toggle"]{
         width: 4.05vw;
     }
-    
+    footer .company-logo img{
+        width: 48.27px;
+    }
+    footer p:nth-of-type(1){
+        max-width: 553px;
+    }
+    .links-wrapper{
+        display: flex;
+        gap: calc(100vw*60/834);
+        justify-content: center;
+        margin-bottom: 69px;
+    }
+    .links-wrapper>*{
+        margin: 0;
+    }
+    footer .copyright-text{
+        max-width: 456px;
+    }
 }

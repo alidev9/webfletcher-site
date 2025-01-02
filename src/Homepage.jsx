@@ -90,6 +90,7 @@ function Homepage(){
                     </div>
                     <img className="target-graphic" src={targetGraphic} alt="" />
                 </div>
+                <div className="extra-space"></div>
             </div>
             <div className="services-section-container">
                 <div className="services-section-cta">
