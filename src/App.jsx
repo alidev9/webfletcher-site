@@ -10,17 +10,25 @@ function App() {
     <>
       <header>
           <nav>
-              <ul>
-                  <li className="homepage-link">
-                      <Link to='/'>
-                        <img src={companyLogo} alt="Webfletcher Logo" />
-                        <span>WebFletcher</span>
-                      </Link>
-                  </li>
-                  <li>
-                      <img src={menuToggle} alt="Menu Toggle" />
-                  </li>
-              </ul>
+                <div className="navbar-inner-wrapper">
+                    <div className="homepage-link">
+                        <Link to='/'>
+                          <img src={companyLogo} alt="Webfletcher Logo" />
+                          <span>WebFletcher</span>
+                        </Link>
+                    </div>
+                    <ul className="navbar-links-container">
+                      <li>About</li>
+                      <li>Services</li>
+                      <li>Portfolio</li>
+                      <li>Support</li>
+                    </ul>
+                    <div className="account-button-container">
+                      <button>Sign In</button>
+                      <button>Register</button>
+                    </div>
+                    <img src={menuToggle} alt="Menu Toggle" />
+                </div>
           </nav>
       </header>
       <Routes>
