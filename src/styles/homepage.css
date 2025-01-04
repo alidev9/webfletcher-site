@@ -807,5 +807,123 @@
     left: 73.9vw;
   }
 }
+@media (1200px <= width) {
+  .hero-section-container {
+    display: flex;
+  }
+  .hero-section-cta {
+    width: 41.0416666667vw;
+    margin: 0 0 0 5.46875vw;
+  }
+  .hero-section-cta h1,
+  .hero-section-cta h1 span {
+    font-size: 5vw;
+    line-height: 6.0510416667vw;
+  }
+  .hero-section-cta h1 {
+    width: 41.0416666667vw;
+  }
+  .hero-section-cta p {
+    width: auto;
+  }
+  .hero-section-info {
+    min-width: 54.6354166667vw;
+    /*the html element hides the overflow outside of the entire page on the x-axis.*/
+    /*This means that .hero-section-info can overflow outside of its borders, 
+    without overflowing outside of the page itself.*/
+    overflow-x: visible;
+  }
+  .hero-text-container,
+  .hero-image-container {
+    border-width: 1.87px;
+  }
+  .hero-text-container {
+    padding: 0.4864583333vw;
+  }
+  .hero-section-info :nth-child(1 of .hero-text-container) {
+    font-size: 1.55625vw;
+    line-height: 1.8833333333vw;
+  }
+  .hero-section-info :nth-child(2 of .hero-text-container),
+  .hero-section-info :nth-child(3 of .hero-text-container),
+  .hero-section-info :nth-child(3 of .hero-text-container) span {
+    font-size: 1.6666666667vw;
+    line-height: 2.0171875vw;
+  }
+  .hero-section-info :nth-child(3 of .hero-text-container) {
+    width: 14.21875vw;
+    height: 2.03125vw;
+  }
+  .hero-section-info :nth-child(1 of .hero-text-container) {
+    right: 4.1vw;
+    /*The top of .hero-section-info is offest by 152 from the top, and overflows out of its own box that much*/
+    top: -2.5276041667vw;
+  }
+  .hero-section-info :nth-child(2 of .hero-text-container) {
+    top: 3.6458333333vw;
+    left: 9.0625vw;
+  }
+  .hero-section-info :nth-child(3 of .hero-text-container) {
+    top: 16.1979166667vw;
+    right: 7.1875vw;
+  }
+  .hero-section-info .border-corner {
+    width: 0.7760416667vw;
+    height: 0.7760416667vw;
+  }
+  .hero-section-info .border-corner:nth-child(1) {
+    top: -0.3880208333vw;
+    left: -0.3880208333vw;
+  }
+  .hero-section-info .border-corner:nth-child(2) {
+    top: -0.3880208333vw;
+    right: -0.3880208333vw;
+  }
+  .hero-section-info .border-corner:nth-child(3) {
+    bottom: -0.3880208333vw;
+    left: -0.3880208333vw;
+  }
+  .hero-section-info .border-corner:nth-child(4) {
+    bottom: -0.3880208333vw;
+    right: -0.3880208333vw;
+  }
+  .hero-section-info :nth-child(1 of .hero-image-container),
+  .hero-section-info :nth-child(1 of .hero-image-container) img {
+    width: 14.6vw;
+    height: 7.9390625vw;
+  }
+  .hero-section-info :nth-child(2 of .hero-image-container),
+  .hero-section-info :nth-child(2 of .hero-image-container) img {
+    width: 19.5979166667vw;
+    height: 11.1390625vw;
+  }
+  .hero-section-info :nth-child(1 of .hero-image-container) {
+    top: 3.6510416667vw;
+    right: 2.940625vw;
+  }
+  .hero-section-info :nth-child(2 of .hero-image-container) {
+    top: 9.53125vw;
+    left: 7.8125vw;
+  }
+  .hero-section-cloud-3 {
+    width: 48.8020833333vw;
+    top: -10.9895833333vw;
+    left: 9vw;
+  }
+  .hero-section-cloud-1 {
+    width: 31.1vw;
+    top: 4.8vw;
+    left: 18vw;
+  }
+  .hero-section-cloud-2-1 {
+    width: 22.5vw;
+  }
+  .hero-section-cloud-2 {
+    width: 34.3229166667vw;
+  }
+  .extra-space {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=homepage.css.map */

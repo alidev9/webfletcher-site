@@ -7,6 +7,10 @@
 @function getVwTablet($pixel){
     @return 100vw * math.div($pixel, 834);
 }
+//The design is based on a desktop viewport width of 1920px
+@function getVwDesktop($pixel){
+    @return 100vw * math.div($pixel, 1920);
+}
 
 @media (320px <= width){
     .hero-section-container{
@@ -845,5 +849,120 @@
 }
 
 @media(1200px <= width){
-
+    .hero-section-container{
+        display: flex;
+    }
+    .hero-section-cta{
+        width: getVwDesktop(788);
+        margin: 0 0 0 getVwDesktop(105);
+    }
+    .hero-section-cta h1,
+    .hero-section-cta h1 span{
+        font-size: getVwDesktop(96);
+        line-height: getVwDesktop(116.18);
+    }
+    .hero-section-cta h1{
+        width: getVwDesktop(788);
+    }
+    .hero-section-cta p{
+        width: auto;
+    }
+    .hero-section-info{
+        min-width: getVwDesktop(1049);
+        /*the html element hides the overflow outside of the entire page on the x-axis.*/
+        /*This means that .hero-section-info can overflow outside of its borders, 
+        without overflowing outside of the page itself.*/
+        overflow-x: visible;
+    }
+    .hero-text-container,
+    .hero-image-container{
+        border-width: 1.87px;
+    }
+    .hero-text-container{
+        padding: getVwDesktop(9.34);
+    }
+    .hero-section-info :nth-child(1 of .hero-text-container){
+        font-size: getVwDesktop(29.88);
+        line-height: getVwDesktop(36.16);
+    }
+    .hero-section-info :nth-child(2 of .hero-text-container),
+    .hero-section-info :nth-child(3 of .hero-text-container),
+    .hero-section-info :nth-child(3 of .hero-text-container) span{
+        font-size: getVwDesktop(32);
+        line-height: getVwDesktop(38.73);
+    }
+    .hero-section-info :nth-child(3 of .hero-text-container){
+        width: getVwDesktop(273);
+        height: getVwDesktop(39);
+    }
+    .hero-section-info :nth-child(1 of .hero-text-container){
+        right: 4.1vw;
+        /*The top of .hero-section-info is offest by 152 from the top, and overflows out of its own box that much*/
+        top: getVwDesktop(103.47 - 152);
+    }
+    .hero-section-info :nth-child(2 of .hero-text-container){
+        top: getVwDesktop(222 - 152);
+        left: getVwDesktop(174);
+    }
+    .hero-section-info :nth-child(3 of .hero-text-container){
+        top: getVwDesktop(463 - 152);
+        right: getVwDesktop(138);
+    }
+    .hero-section-info .border-corner{
+        width: getVwDesktop(14.9);
+        height: getVwDesktop(14.9);
+    }
+    .hero-section-info .border-corner:nth-child(1){
+        top: getVwDesktop(-7.45);
+        left: getVwDesktop(-7.45);
+    }
+    .hero-section-info .border-corner:nth-child(2){
+        top: getVwDesktop(-7.45);
+        right: getVwDesktop(-7.45);
+    }
+    .hero-section-info .border-corner:nth-child(3){
+        bottom: getVwDesktop(-7.45);
+        left: getVwDesktop(-7.45);
+    }
+    .hero-section-info .border-corner:nth-child(4){
+        bottom: getVwDesktop(-7.45);
+        right: getVwDesktop(-7.45);
+    }
+    .hero-section-info :nth-child(1 of .hero-image-container),
+    .hero-section-info :nth-child(1 of .hero-image-container) img{
+        width: 14.6vw;
+        height: getVwDesktop(152.43);
+    }
+    .hero-section-info :nth-child(2 of .hero-image-container),
+    .hero-section-info :nth-child(2 of .hero-image-container) img{
+        width: getVwDesktop(376.28);
+        height: getVwDesktop(213.87);
+    }
+    .hero-section-info :nth-child(1 of .hero-image-container){
+        top: getVwDesktop(222.1 - 152);
+        right: getVwDesktop(56.46);
+    }
+    .hero-section-info :nth-child(2 of .hero-image-container){
+        top: getVwDesktop(335 - 152);
+        left: getVwDesktop(150);
+    }
+    .hero-section-cloud-3{
+        width: getVwDesktop(937);
+        top: getVwDesktop(-211);
+        left: 9vw;
+    }
+    .hero-section-cloud-1{
+        width: 31.1vw;
+        top: 4.8vw;
+        left: 18vw;
+    }
+    .hero-section-cloud-2-1{
+        width: getVwDesktop(432);
+    }
+    .hero-section-cloud-2{
+        width: getVwDesktop(659);
+    }
+    .extra-space{
+        display: none;
+    }
 }
