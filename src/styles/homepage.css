@@ -810,6 +810,7 @@
 @media (1200px <= width) {
   .hero-section-container {
     display: flex;
+    height: 55.7291666667vw;
   }
   .hero-section-cta {
     width: 41.0416666667vw;
@@ -905,21 +906,32 @@
     top: 9.53125vw;
     left: 7.8125vw;
   }
+  .hero-section-info .target-graphic {
+    width: 6.7708333333vw;
+    height: 6.7708333333vw;
+    top: 19.1145833333vw;
+    right: 7.1875vw;
+  }
   .hero-section-cloud-3 {
     width: 48.8020833333vw;
     top: -10.9895833333vw;
     left: 9vw;
   }
   .hero-section-cloud-1 {
-    width: 31.1vw;
-    top: 4.8vw;
-    left: 18vw;
+    width: 33.5vw;
+    top: 5.9vw;
+    left: 17.5vw;
   }
   .hero-section-cloud-2-1 {
     width: 22.5vw;
+    top: -6.2vw;
+    right: 32.1354166667vw;
   }
   .hero-section-cloud-2 {
     width: 34.3229166667vw;
+    top: 27.4479166667vw;
+    left: revert;
+    right: 80.1963541667vw;
   }
   .extra-space {
     display: none;

@@ -851,6 +851,7 @@
 @media(1200px <= width){
     .hero-section-container{
         display: flex;
+        height: getVwDesktop(926 + 72 + 72);
     }
     .hero-section-cta{
         width: getVwDesktop(788);
@@ -946,21 +947,32 @@
         top: getVwDesktop(335 - 152);
         left: getVwDesktop(150);
     }
+    .hero-section-info .target-graphic{
+        width: getVwDesktop(130);
+        height: getVwDesktop(130);
+        top: getVwDesktop(519 - 152);
+        right: getVwDesktop(138);
+    }
     .hero-section-cloud-3{
         width: getVwDesktop(937);
         top: getVwDesktop(-211);
         left: 9vw;
     }
     .hero-section-cloud-1{
-        width: 31.1vw;
-        top: 4.8vw;
-        left: 18vw;
+        width: 33.5vw;
+        top: 5.9vw;
+        left: 17.5vw;
     }
     .hero-section-cloud-2-1{
         width: getVwDesktop(432);
+        top: -6.2vw;
+        right: getVwDesktop(617);
     }
     .hero-section-cloud-2{
         width: getVwDesktop(659);
+        top: getVwDesktop(499 + 28);
+        left: revert;
+        right: getVwDesktop(1539.77);
     }
     .extra-space{
         display: none;
