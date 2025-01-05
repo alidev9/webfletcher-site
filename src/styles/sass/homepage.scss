@@ -1065,6 +1065,19 @@
         margin-bottom: 0;
         max-width: 23.5rem;
     }
+    .testimonials-section-container{
+        padding-bottom: 73px;
+    }
+    .testimonials-section-container .intro-container h2{
+        font-size: 3rem;
+        max-width: 500px;
+        margin: 9px 0 31px 0;
+    }
+    .testimonials-section-container .intro-container p{
+        max-width: 63.56rem;
+        font-size: 1.25rem;
+        margin: 0;
+    }
     .feature-container .feature-number{
         display: block;
         font-family: "Inter";
@@ -1072,5 +1085,23 @@
         font-size: 6.25rem;
         color: rgba(197, 217, 241, 1);
     }
-
+    .testimonial-carousel-container{
+        display: grid;
+        grid-template-columns: max-content max-content;
+        overflow-x: revert;
+        scroll-snap-type: revert;
+        row-gap: 48px;
+        column-gap: 73px;
+        padding: 0;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .testimonial{
+        min-width: 0;
+        max-width: 29.5rem;
+        padding: 2.5rem 1.87rem;
+    }
+    .carousel-circle-wrapper{
+        display: none;
+    }
 }
