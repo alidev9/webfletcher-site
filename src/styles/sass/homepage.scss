@@ -1048,6 +1048,8 @@
         display: flex;
         justify-content: center;
         gap: getVwDesktop(122);
+        /*for screens of smaller width such as 1200px*/
+        margin: 0 48px;
     }
     .feature-container{
         margin: 0;
@@ -1100,8 +1102,32 @@
         min-width: 0;
         max-width: 29.5rem;
         padding: 2.5rem 1.87rem;
+        column-gap: 1.62rem;
     }
     .carousel-circle-wrapper{
         display: none;
+    }
+    .closing-section-container{
+        max-width: 75.69rem;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 0 auto 250px auto;
+    }
+    .closing-image-wrapper{
+        margin-top: 250px;
+        margin-bottom: 154.85px;
+    }
+    .closing-image{
+        /*closing images are sized to line up with text*/
+        width: 13.25rem;
+        height: 18.88rem;
+        border-radius: 1.25rem;
+    }
+    .closing-section-container h2{
+        max-width: 75.69rem;
+    }
+    .closing-section-container p{
+        max-width: 61.25rem;
     }
 }

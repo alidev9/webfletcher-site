@@ -35,11 +35,13 @@ function App() {
         <Route path='/' element={<Homepage />}/>
       </Routes>
       <footer>
-        <div className="company-logo">
-          <img src={companyLogo} alt="" />
-          <span>WebFletcher</span>
+        <div className="company-logo-description-wrapper">
+          <div className="company-logo">
+            <img src={companyLogo} alt="" />
+            <span>WebFletcher</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque</p>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque</p>
         <div className="links-wrapper">
           <div className="resources-links-wrapper footer-wrapper">
             <h2>Resources</h2>
