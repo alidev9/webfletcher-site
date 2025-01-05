@@ -267,6 +267,7 @@
     .service-container img{
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        width: 2.5rem;
     }
     .service-container h3{
         grid-column: 2 / 3;
@@ -381,6 +382,9 @@
     .features-section-container{
         margin-bottom: 64px;
     }
+    .feature-container-wrapper{
+        display: contents;
+    }
     .feature-container{
         display: flex;
         flex-flow: column nowrap;
@@ -391,9 +395,9 @@
         margin-bottom: 60px;
     }
     .feature-container .feature-image{
-        width: 203.75px;
-        height: 108.73px;
-        border-radius: 18.27px;
+        width: 12.73rem;
+        height: 6.8rem;
+        border-radius: 1.14rem;
         background-color: rgba(196, 217, 241, 1);
     }
     .feature-container h3{
@@ -980,6 +984,9 @@
     .extra-space{
         display: none;
     }
+    .intro-container p{
+        max-width: 980px;
+    }
     .services-section-container{
         margin-bottom: 250px;
     }
@@ -1030,6 +1037,40 @@
         border-radius: 1.25rem;
         top: 17.75rem;
         left: 7.69rem;
+    }
+    .features-section-container{
+        margin-bottom: 250px;
+    }
+    .features-section-container .intro-container{
+        margin-bottom: 90px;
+    }
+    .feature-container-wrapper{
+        display: flex;
+        justify-content: center;
+        gap: getVwDesktop(122);
+    }
+    .feature-container{
+        margin: 0;
+        gap: 32px;
+    }
+    .feature-container:not(:last-child){
+        margin-bottom: 0;
+    }
+    .feature-container h3{
+        font-size: 1.69rem;
+        margin: 0;
+    }
+    .feature-container p{
+        font-size: 1.06rem;
+        margin-bottom: 0;
+        max-width: 23.5rem;
+    }
+    .feature-container .feature-number{
+        display: block;
+        font-family: "Inter";
+        font-weight: 900;
+        font-size: 6.25rem;
+        color: rgba(197, 217, 241, 1);
     }
 
 }

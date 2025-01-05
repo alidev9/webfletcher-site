@@ -133,23 +133,25 @@ function Homepage(){
                     <h2>Why choose us</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. Donec eleifend risus in metus pellentesque, sed auctor neque ornare. Etiam auctor nulla nec elementum ornare.</p>
                 </div>
-                <div className="feature-container">
-                    <div className="feature-image"></div>
-                    <h3>Competitve prices</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. </p>
-                    <div className="feature-number">01.</div>
-                </div>
-                <div className="feature-container">
-                    <div className="feature-image"></div>
-                    <h3>Professionalism</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. </p>
-                    <div className="feature-number">02.</div>
-                </div>
-                <div className="feature-container">
-                    <div className="feature-image"></div>
-                    <h3>Long-term partnership</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
-                    <div className="feature-number">03.</div>
+                <div className="feature-container-wrapper">
+                    <div className="feature-container">
+                        <div className="feature-image"></div>
+                        <h3>Competitve prices</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. </p>
+                        <div className="feature-number">01.</div>
+                    </div>
+                    <div className="feature-container">
+                        <div className="feature-image"></div>
+                        <h3>Professionalism</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. </p>
+                        <div className="feature-number">02.</div>
+                    </div>
+                    <div className="feature-container">
+                        <div className="feature-image"></div>
+                        <h3>Long-term partnership</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                        <div className="feature-number">03.</div>
+                    </div>
                 </div>
             </div>
             <div className="testimonials-section-container">
