@@ -98,30 +98,32 @@ function Homepage(){
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque. Aenean leo risus, imperdiet vitae dapibus vel, ornare sed arcu. Donec eleifend risus in metus pellentesque, sed auctor neque ornare. Etiam auctor nulla nec elementum ornare.</p>
                     <button className="cta-button">Learn More</button>
                 </div>
-                <div className="services-section-info">
-                    <div className="service-container">
-                        <img src={computerStarIcon} alt="" />
-                        <h3>Web Development</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                <div className="services-section-info-images-wrapper">
+                    <div className="services-section-info">
+                        <div className="service-container">
+                            <img src={computerStarIcon} alt="" />
+                            <h3>Web Development</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                        </div>
+                        <div className="service-container">
+                            <img src={personShareIcon} alt="" />
+                            <h3>Brand Design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                        </div>
+                        <div className="service-container">
+                            <img src={databaseServerIcon} alt="" />
+                            <h3>Reliable Hosting</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
+                        </div>
                     </div>
-                    <div className="service-container">
-                        <img src={personShareIcon} alt="" />
-                        <h3>Brand Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
-                    </div>
-                    <div className="service-container">
-                        <img src={databaseServerIcon} alt="" />
-                        <h3>Reliable Hosting</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat metus eget dolor faucibus, vel maximus nulla scelerisque.</p>
-                    </div>
-                </div>
-                <div className="services-section-images">
-                    {/*Placeholder divs for future images*/}
-                    <img className="services-section-cloud-1" src={cloudImage1} alt="" />
-                    <img className="services-section-cloud-2" src={cloudImage2} alt="" />
-                    <div className="services-image-wrapper">
-                        <div className="services-image"></div>
-                        <div className="services-image"></div>
+                    <div className="services-section-images">
+                        {/*Placeholder divs for future images*/}
+                        <img className="services-section-cloud-1" src={cloudImage1} alt="" />
+                        <img className="services-section-cloud-2" src={cloudImage2} alt="" />
+                        <div className="services-image-wrapper">
+                            <div className="services-image"></div>
+                            <div className="services-image"></div>
+                        </div>
                     </div>
                 </div>
             </div>

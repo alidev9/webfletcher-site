@@ -265,6 +265,9 @@
     color: var(--main-color-deemphasize);
     line-height: 1.2rem;
   }
+  .services-section-info-images-wrapper {
+    display: contents;
+  }
   /*could use some refining later*/
   .services-section-images {
     overflow-x: clip;
@@ -810,7 +813,7 @@
 @media (1200px <= width) {
   .hero-section-container {
     display: flex;
-    height: 55.7291666667vw;
+    height: 47.8645833333vw;
   }
   .hero-section-cta {
     width: 41.0416666667vw;
@@ -833,6 +836,7 @@
     /*This means that .hero-section-info can overflow outside of its borders, 
     without overflowing outside of the page itself.*/
     overflow-x: visible;
+    height: auto;
   }
   .hero-text-container,
   .hero-image-container {
@@ -935,6 +939,57 @@
   }
   .extra-space {
     display: none;
+  }
+  .services-section-container {
+    margin-bottom: 250px;
+  }
+  .services-section-cta h2 {
+    line-height: 3.63rem;
+  }
+  .services-section-cta p {
+    max-width: 980px;
+    margin: 18px auto;
+  }
+  .services-section-info-images-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    margin-top: 42px;
+  }
+  .services-section-info {
+    max-width: 24.8rem;
+    margin: 0;
+  }
+  .service-container {
+    row-gap: 2.19rem;
+  }
+  .service-container p {
+    font-size: 1.06rem;
+  }
+  .service-container:not(:last-child) {
+    margin-bottom: 4.25rem;
+  }
+  /*In Desktop view, the service images need to line up with text, as such they should be sized with the rem unit*/
+  .services-section-images {
+    height: 37.44rem;
+    order: -1;
+  }
+  .services-image-wrapper {
+    width: 33.31rem;
+    height: 37.44rem;
+    top: 0;
+  }
+  :nth-child(1 of .services-image) {
+    width: 24.75rem;
+    height: 32.19rem;
+    border-radius: 1.25rem;
+  }
+  :nth-child(2 of .services-image) {
+    width: 25.63rem;
+    height: 19.69rem;
+    border-radius: 1.25rem;
+    top: 17.75rem;
+    left: 7.69rem;
   }
 }
 
