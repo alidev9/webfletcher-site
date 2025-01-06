@@ -147,6 +147,65 @@ body{
         margin: 0 auto;
         text-align: center;
     }
+    .hamburger-container-html,
+    .hamburger-container-body{
+        height: 100%;
+    }
+    .hamburger-container-root{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        padding-top: 71px;
+    }
+    .hamburger-header a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hamburger-header img[alt="Webfletcher Logo"]{
+        width: 2.03rem;
+        height: auto;
+    }
+    .hamburger-header span{
+        font-family: "Inter";
+        color: var(--main-color);
+        font-size: 1.1rem;
+        line-height: 1.33rem;
+        font-weight: 700;
+        margin-left: 1.43rem;
+        margin-right: 17.2vw;
+    }
+    .hamburger-header img[alt="Close Hamburger Menu"]{
+        width: 2.81rem;
+    }
+    .hamburger-links-container{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 60px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .hamburger-links-container li{
+        font-family: "Inter";
+        color: var(--main-color);
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 3.03rem;
+    }
+    .order-button{
+        font-family: "Inter";
+        font-weight: 500;
+        color: rgba(73, 149, 255, 1);
+        font-size: 1.87rem;
+        line-height: 2.27rem;
+        width: 16.69rem;
+        height: 3.5rem;
+        background-color: rgba(0,0,0,0);
+        border: 0.31rem solid rgba(73, 149, 255, 1);
+        border-radius: 1.25rem;
+        margin: 0 auto;
+    }
 }
 
 @media (480px <= width){
