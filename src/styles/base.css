@@ -40,8 +40,24 @@ body{
 @media (320px <= width){
     #root{
         background-color: var(--white);
-        width: 100%;
         overflow-x: clip;
+        display: flex;
+        position: relative;
+    }
+    .page-wrapper{
+        overflow-x: clip;
+        flex: 0 0 auto;
+        width: 100vw;
+    }
+    .hamburger-menu-container{
+        position: absolute;
+        transition: left 0.8s ease-out;
+        left: 100%;
+        background-color: white;
+        z-index: 5;
+    }
+    .hamburger-menu-container-show{
+        left: 15%;
     }
     nav{
         height: 153px;
