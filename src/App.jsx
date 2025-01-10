@@ -8,11 +8,15 @@ import { useState, useEffect } from 'react'
 import './styles/base.css'
 
 function App() {
-  function showHamburgerMenu(e){
+  function toggleHamburgerMenuCSS(){
     document.querySelector('.hamburger-menu-container').classList.toggle('hamburger-menu-container-show');
+    document.querySelector('html').classList.toggle('hamburger-menu-open');
+  }
+  function showHamburgerMenu(e){
+    toggleHamburgerMenuCSS();
   }
   function closeHamburgerMenu(e){
-    document.querySelector('.hamburger-menu-container').classList.toggle('hamburger-menu-container-show');
+    toggleHamburgerMenuCSS();
   }
   /*TODO: Make the name of the current page bold in the hamburger menu*/
   useEffect(() => {
@@ -79,6 +83,8 @@ function App() {
           {/*using a div as this is not an actual header*/}
           <div className="hamburger-menu-container">
             <div className="hamburger-header">
+              <img src={companyLogo} alt="Webfletcher Logo"/>
+              <span>Webfletcher</span>
               <img src={closeMenuToggle} alt="Close Hamburger Menu" onClick={closeHamburgerMenu} />
             </div>
             <ul className="hamburger-links-container">
