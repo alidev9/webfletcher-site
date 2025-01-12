@@ -219,7 +219,7 @@ function Homepage(){
                 <div>Any inquiries? <a href="#">Contact sales</a>
                 <img src={cloudImage3} alt="" className="closing-section-cloud-3" />
                 </div>
-                <img className="closing-cloud-2-desktop" src={cloudImage2} alt="" />
+                <img className="closing-cloud-2-desktop cloud-desktop" src={cloudImage2} alt="" />
             </div>
         </main>
     )
