@@ -274,9 +274,9 @@ body{
     }
     nav{
         height: 17.71vw;
-        background-size: 38vw auto;
-        background-position-x: -8.5vw;
-        background-position-y: -12.9vw;
+        background-size: min(38vw, 729.6px) auto;
+        background-position-x: max(-8.5vw, -163.2px);
+        background-position-y: max(-12.9vw, -247.667px);
     }
     .navbar-inner-wrapper{
         padding: 1.56vw 5.62vw 0 5.62vw;

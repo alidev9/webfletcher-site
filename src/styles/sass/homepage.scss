@@ -13,6 +13,10 @@
 }
 
 @media (320px <= width){
+    /*clouds that are not part of mobile and tablet view*/
+    .cloud-desktop{
+        display: none;
+    }
     .hero-section-container{
         height: fit-content;
         margin-bottom: getVwMobile(38.06);
@@ -424,9 +428,10 @@
     .feature-container .feature-number{
         display: none;
     }
-
-    .testimonials-section-container{
+    .testimonial-section-outer-wrapper{
         background-color: rgba(229, 241, 255, 1);
+    }
+    .testimonials-section-container{
         padding-top: 46px;
         padding-bottom: 45.2px;
         position: relative;
@@ -728,7 +733,7 @@
     }
     .services-section-cta p{
         max-width: 774px;
-        margin: 20px auto;
+        margin: 20px 30px;
     }
     .services-section-info{
         max-width: 415px;
@@ -838,7 +843,7 @@
     .closing-section-container h2{
         font-size: 3rem;
         line-height: 3.63rem;
-        margin: 0 auto 40px auto;
+        margin: 0 24px 40px 24px;
         max-width: 727px;
     }
     .closing-section-container p{
@@ -865,8 +870,8 @@
     }
     .hero-section-cta h1,
     .hero-section-cta h1 span{
-        font-size: getVwDesktop(96);
-        line-height: getVwDesktop(116.18);
+        font-size: min(getVwDesktop(96), 96px);
+        line-height: min(getVwDesktop(116.18), 116.18px);
     }
     .hero-section-cta h1{
         width: getVwDesktop(788);
@@ -988,7 +993,13 @@
         max-width: 980px;
     }
     .services-section-container{
-        margin-bottom: 250px;
+        max-width: 1920px;
+        margin: 0 auto 250px auto;
+        position: relative;
+
+    }
+    :nth-child(2 of .services-cloud-anchor){
+        order: 3;
     }
     .services-section-cta h2{
         line-height: 3.63rem;
@@ -1000,12 +1011,14 @@
     .services-section-info-images-wrapper{
         display: flex;
         justify-content: center;
-        gap: 128px;
+        gap: getVwDesktop(128);
         margin-top: 42px;
     }
     .services-section-info{
         max-width: 24.8rem;
         margin: 0;
+        flex-shrink: 0;
+        order: 1;
     }
     .service-container{
         row-gap: 2.19rem;
@@ -1019,7 +1032,7 @@
     /*In Desktop view, the service images need to line up with text, as such they should be sized with the rem unit*/
     .services-section-images{
         height: 37.44rem;
-        order: -1;
+        order: 0;
     }
     .services-image-wrapper{
         width: 33.31rem;
@@ -1039,7 +1052,9 @@
         left: 7.69rem;
     }
     .features-section-container{
-        margin-bottom: 250px;
+        max-width: 1920px;
+        position: relative;
+        margin: 0 auto 250px auto;
     }
     .features-section-container .intro-container{
         margin-bottom: 90px;
@@ -1068,6 +1083,8 @@
         max-width: 23.5rem;
     }
     .testimonials-section-container{
+        max-width: 1920px;
+        margin: 0 auto;    
         padding-bottom: 73px;
     }
     .testimonials-section-container .intro-container h2{
@@ -1108,6 +1125,7 @@
         display: none;
     }
     .closing-section-container{
+        position: relative;
         max-width: 75.69rem;
         display: flex;
         flex-flow: column nowrap;
@@ -1129,5 +1147,46 @@
     }
     .closing-section-container p{
         max-width: 61.25rem;
+    }
+    /*desktop clouds*/
+    /*the clouds are positioned statically and are best viewed at resolutions above 1920x1080*/
+    .services-cloud-1-desktop{
+        display: block;
+        position: absolute;
+        /*extra space on the SVG is accounted for*/
+        width: calc(764px + 37px);
+        top: calc(704px - 37px);
+        left: 1406px;
+    }
+    .features-cloud-2-desktop{
+        display: block;
+        position: absolute;
+        transform: scale(-1, 1);
+        width: 492.21px;
+        top: -57px;
+        right: 1622.69px;
+    }
+    .testimonial-cloud-3-desktop{
+        display: block;
+        transform: scale(-1, 1);
+        position: absolute;
+        width: 771px;
+        top: -356px;
+        left: 1419px;
+    }
+    .testimonial-section-cloud-3{
+        width: 771px;
+        top: 797px;
+        right: 1441px;
+    }
+    .closing-section-cloud-3{
+        display: none;
+    }
+    .closing-cloud-2-desktop{
+        position: absolute;
+        transform: scale(-1, 1);
+        width: 561.31px;
+        top: 667px;
+        left: 1082px;
     }
 }
